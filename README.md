@@ -62,7 +62,7 @@ summer-website/
           主站內容露出
 ```
 
-- 動畫一次性播放（不 loop），總長約 **6 秒**
+- 動畫一次性播放，總長約 **6 秒**
 - **14 秒 fallback**：如果動畫因任何原因卡住，overlay 會自動關閉
 - 動畫自身也有 **12 秒 fallback timeout**
 
