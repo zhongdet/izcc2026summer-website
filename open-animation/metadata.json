@@ -1,0 +1,8 @@
+{
+  "name": "IZCC 聯課暑研招生網站",
+  "description": "建中資訊 INFOR、成功電研 CKCSC、中山資訊 ZSISC、景美資訊 CGISC 四校聯合暑期研習營官方招生與報名網站",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
