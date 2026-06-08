@@ -11,6 +11,9 @@ import ckcscLogo from '@/assets/.aistudio/成電社徽.jpg';
 import cgiscLogo from '@/assets/.aistudio/景資社徽.jpg';
 import heroLogo from '@/assets/.aistudio/hero-logo.png';
 
+// Exported for preloading in IntroLoader
+export const ANIMATION_IMAGES = [inforLogo, zsiscLogo, ckcscLogo, cgiscLogo, heroLogo];
+
 // Common style wrapper for SVGs to handle unified brand neon glow effects
 export const SVGGlowFilters: React.FC = () => (
   <svg className="absolute w-0 h-0" aria-hidden="true" width="0" height="0">

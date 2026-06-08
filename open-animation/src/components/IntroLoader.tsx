@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { INFORBadge, ZSISCBadge, CKCSCBadge, CGISCBadge, IZCCLogo } from './ClubBadge';
+import { INFORBadge, ZSISCBadge, CKCSCBadge, CGISCBadge, IZCCLogo, ANIMATION_IMAGES } from './ClubBadge';
 import { Sparkle, Sparkles } from 'lucide-react';
 
 interface IntroLoaderProps {
@@ -16,9 +16,30 @@ type Mode = 'scatter' | 'merging' | 'fused';
 
 export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
   const [phase, setPhase] = useState<Mode>('scatter');
+  const [ready, setReady] = useState(false);
 
-  // Timed phase transitions (no progress bar)
+  // Preload all 5 images before starting the animation
   useEffect(() => {
+    const preload = (url: string) =>
+      new Promise<void>((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve();
+        img.onerror = () => resolve(); // fail silently — don't block on broken image
+        img.src = url;
+      });
+
+    const SAFETY_TIMEOUT = 8000; // 8s max wait, then show animation regardless
+
+    Promise.race([
+      Promise.all(ANIMATION_IMAGES.map(preload)),
+      new Promise<void>((r) => setTimeout(r, SAFETY_TIMEOUT)),
+    ]).then(() => setReady(true));
+  }, []);
+
+  // Timed phase transitions (start only after images are ready)
+  useEffect(() => {
+    if (!ready) return;
+
     const t1 = setTimeout(() => setPhase('merging'), 1500);  // scatter → merging
     const t2 = setTimeout(() => setPhase('fused'), 3000);     // merging → fused
     const finish = setTimeout(() => {
@@ -30,7 +51,7 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
       clearTimeout(t2);
       clearTimeout(finish);
     };
-  }, [onComplete]);
+  }, [ready, onComplete]);
 
   return (
     <div className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-slate-200 overflow-hidden select-none font-mono px-4">
@@ -46,6 +67,7 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
 
       {/* MAIN ANIMATION CANVAS */}
       <div className="relative w-96 h-96 flex items-center justify-center z-20">
+        {ready ? (
         <AnimatePresence mode="popLayout">
 
           {/* THE FOUR CLUB BADGES IN FLIGHT */}
@@ -169,6 +191,24 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
           )}
 
         </AnimatePresence>
+        ) : (
+          <motion.div
+            key="loading-indicator"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex flex-col items-center gap-6"
+          >
+            {/* Spinning ring */}
+            <div className="w-12 h-12 border-2 border-yellow-500/30 border-t-yellow-400 rounded-full animate-spin" />
+            <motion.p
+              animate={{ opacity: [0.3, 1, 0.3] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+              className="text-[11px] uppercase tracking-[0.3em] text-yellow-500/60 font-mono"
+            >
+              Loading
+            </motion.p>
+          </motion.div>
+        )}
       </div>
 
     </div>
