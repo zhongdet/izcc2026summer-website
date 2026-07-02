@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
 .btn2 {
-
+  position: relative;
   width: 360px;
   height: 80px;
   cursor: pointer;
@@ -44,6 +44,6 @@ svg {
 
 .btn2 span {
   color: white;
-  font-size: 30px;
+  font-size: 34px; /* Enlarged button text */
   font-weight: 1000;
 }

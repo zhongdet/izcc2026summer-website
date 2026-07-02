@@ -1596,6 +1596,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: url("../img/footer-bg.jpg") center center no-repeat;
+  background-size: cover !important;
   color: #2e2e2e;
   font-size: 14px;
   position: relative;
@@ -1747,4 +1748,533 @@ img {
   align-items: center;
   width: 100%;
   height: 100vh;
+}
+
+/* ==========================================
+   2026 Web Design System & Layouts
+   ========================================== */
+
+/* --- 暑訓簡介 Section --- */
+.about h3 {
+  font-size: 32px !important;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.intro-p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+/* --- 2x2 Club Grid (Hover/Click Expand via Flip Cards) --- */
+.club-grid-container {
+  padding: 10px;
+}
+.club-window-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* Larger Gap */
+}
+@media (max-width: 576px) {
+  .club-window-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.club-window-card {
+  background: transparent;
+  height: 220px; /* Smaller Card Height */
+  perspective: 1000px; /* Enable 3D transitions */
+  cursor: pointer;
+}
+
+.club-window-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+}
+
+/* Desktop Hover Flip */
+@media (hover: hover) {
+  .club-window-card:hover .club-window-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Click/Touch Flip */
+.club-window-card.flipped .club-window-inner {
+  transform: rotateY(180deg);
+}
+
+.club-window-front, .club-window-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.club-window-front {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Smaller borders */
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Corner Accents */
+.club-window-front::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid rgba(245, 197, 66, 0.6);
+  border-left: 2px solid rgba(245, 197, 66, 0.6);
+}
+.club-window-front::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid rgba(245, 197, 66, 0.6);
+  border-right: 2px solid rgba(245, 197, 66, 0.6);
+}
+
+.club-window-back {
+  background: linear-gradient(135deg, #2d2d2d 0%, #171717 100%);
+  border: 1px solid rgba(245, 197, 66, 0.3); /* Smaller border */
+  transform: rotateY(180deg);
+}
+
+.club-badge-wrapper {
+  width: 70px; /* Smaller Badge size */
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(245, 197, 66, 0.3);
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.club-window-card:hover .club-badge-wrapper {
+  transform: scale(1.08);
+}
+
+.club-badge-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.club-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #F5C542;
+  margin: 5px 0 2px 0;
+  letter-spacing: 0.5px;
+}
+
+.club-subname {
+  font-size: 14px;
+  color: #999999;
+}
+
+.club-back-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #F5C542;
+  margin-bottom: 8px;
+}
+
+.club-desc {
+  font-size: 14px;
+  color: #cccccc;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  text-align: justify;
+}
+
+.club-link {
+  font-size: 11px;
+  color: #F5C542;
+  font-weight: 600;
+  border: 1px solid #F5C542;
+  padding: 3px 12px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.club-link:hover {
+  background: #F5C542;
+  color: #2e2e2e !important;
+}
+
+/* --- 活動介紹 Section --- */
+.activity-image-wrapper img {
+  border-radius: 20px !important;
+  width: 100%;
+  object-fit: cover;
+  max-height: 450px;
+}
+
+.activity-days-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.activity-day-item {
+  display: flex;
+  align-items: center; /* Vertically center badge and details */
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.activity-day-item:hover {
+  background: rgba(245, 197, 66, 0.05);
+  border-color: rgba(245, 197, 66, 0.3);
+  transform: translateX(5px);
+}
+
+.day-badge {
+  background: #F5C542;
+  color: #2e2e2e;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  align-self: center; /* Vertically center badge */
+  min-width: 60px;
+  text-align: center;
+}
+
+.day-details h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.day-details p {
+  font-size: 13px;
+  color: #bbbbbb;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --- 行程表 Section & Timetable --- */
+.timetable-wrapper {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-x: auto;
+}
+.timetable-table {
+  color: #e4e4e4;
+  border-collapse: collapse;
+}
+.timetable-table th {
+  background: #1e1e1e;
+  color: #F5C542;
+  font-weight: 700;
+  border-bottom: 2px solid #F5C542 !important;
+  padding: 15px 12px;
+  font-size: 20px; /* Enlarged */
+}
+.timetable-table td {
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding: 14px 10px;
+  font-size: 18px; /* Enlarged */
+  background: rgba(0, 0, 0, 0.1);
+  min-width: 100px;
+}
+.timetable-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+.time-col {
+  background: #1a1a1a !important;
+  color: #F5C542 !important;
+  font-weight: 700;
+  font-size: 16px; /* Enlarged */
+}
+.loc-text {
+  font-size: 14px; /* Enlarged */
+  color: #888888;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* Timetable activity names styling (No borders/background, larger text) */
+.activity-tag {
+  display: inline-block;
+  font-size: 20px; /* Enlarged */
+  font-weight: 700;
+  padding: 0;
+  border: none !important;
+  background: transparent !important;
+}
+.activity-tag.game { color: #2eb85c; }
+.activity-tag.warm { color: #39f; }
+.activity-tag.class-py { color: #f9b115; }
+.activity-tag.class-web { color: #20c997; }
+.activity-tag.class-cpp { color: #b883fc; }
+.activity-tag.special { color: #e55353; }
+.activity-tag.rest { color: #ced4da; }
+.activity-tag.party { color: #f86c6b; }
+
+/* --- 行程表 Section --- */
+.schedule {
+  padding: 60px 0;
+}
+.schedule-img-wrapper img {
+  border-radius: 20px !important;
+  max-width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- 課程介紹 Section --- */
+.course-image-wrapper {
+  height: 430px;
+  width: 100%;
+}
+.course-image-wrapper img {
+  border-radius: 20px !important;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.course-rail-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  height: 480px; /* Fixed Height on Desktop */
+}
+
+/* Navigation Rail (Vertical pills) */
+.course-rail {
+  gap: 10px;
+}
+
+.course-rail .nav-link {
+  color: #cccccc;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 12px 18px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.course-rail .nav-link .rail-num {
+  font-size: 11px;
+  color: #888888;
+  font-weight: 400;
+}
+
+.course-rail .nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.course-rail .nav-link.active {
+  background: #F5C542 !important;
+  color: #2e2e2e !important;
+  border-color: #F5C542;
+}
+
+.course-rail .nav-link.active .rail-num {
+  color: #555555;
+}
+
+/* Content display */
+.course-tab-content {
+  padding: 10px;
+}
+
+.course-tab-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #F5C542;
+  margin-bottom: 15px;
+}
+
+.course-intro-text {
+  font-size: 14px;
+  color: #dddddd;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.course-topics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course-topics li {
+  font-size: 14px;
+  color: #cccccc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.course-topics li i {
+  color: #F5C542;
+  font-size: 16px;
+}
+
+/* --- 報名表單 Section --- */
+.signup {
+  padding: 80px 0;
+}
+.btn-signup-link {
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-signup-link:hover {
+  text-decoration: none;
+}
+
+/* ==========================================
+   Mobile/Narrow Screen Spacing Adjustments
+   ========================================== */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 0 !important;
+  }
+  .section-title {
+    margin-bottom: 25px !important;
+  }
+  .about, .activity, .schedule, .course, .signup {
+    padding: 45px 0 !important;
+  }
+  
+  /* Club Grid Card on Mobile */
+  .club-window-card {
+    height: 190px;
+  }
+  .club-badge-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Navigation Rail on Mobile */
+  .course-rail {
+    flex-direction: row !important;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  .course-rail .nav-link {
+    display: inline-flex;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  
+  /* Course Image Wrapper on Mobile */
+  .course-image-wrapper {
+    height: 280px !important;
+    margin-bottom: 15px;
+  }
+  
+  /* Padding for intro content on mobile */
+  .about .content {
+    padding: 0 20px !important;
+  }
+  /* Course container auto height on mobile */
+  .course-rail-container {
+    height: auto !important;
+  }
+  /* Hide standard header elements on mobile */
+  #navbar, .mobile-nav-toggle {
+    display: none !important;
+  }
+  #header-section-title {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) {
+  #header-section-title {
+    display: none !important;
+  }
+}
+
+/* Mobile Header Section Title */
+.header-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #F5C542;
+  margin: 0;
+  transition: opacity 0.2s ease;
+  opacity: 1;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.header-section-title.fade-out {
+  opacity: 0;
+}
+
+/* Course Rail Icons */
+.rail-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin-right: 4px;
+  filter: grayscale(1) brightness(1.5);
+  transition: all 0.3s ease;
+}
+.course-rail .nav-link:hover .rail-icon {
+  filter: none;
+  transform: scale(1.1);
+}
+.course-rail .nav-link.active .rail-icon {
+  filter: none; /* Keep color on active tab */
+}
+
+/* Course Content Title Icons */
+.content-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-right: 10px;
+  display: inline-block;
+  border-radius: 0 !important;
 }

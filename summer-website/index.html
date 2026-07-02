@@ -8,7 +8,8 @@
   <title>IZCC - 四校聯合暑訓</title>
   <meta property="og:title" content="2024建成楓景聯合暑訓《楓夜景夏遇建成》">
   <meta property="og:description" content="楓夜景夏遇建成是由建國中學、成功高中、中山女高、景美女高聯合辦理的2024暑期營隊，歡迎大家報名！">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1244571847740227629/1258416231745196052/449752175_461528256832441_5968733539408468513_n.png?ex=6687f6f1&is=6686a571&hm=160542dc72085d76460d353e8fb02fcd7780a74a64278338968de10a8cac5c95&">
+  <meta property="og:image"
+    content="https://cdn.discordapp.com/attachments/1244571847740227629/1258416231745196052/449752175_461528256832441_5968733539408468513_n.png?ex=6687f6f1&is=6686a571&hm=160542dc72085d76460d353e8fb02fcd7780a74a64278338968de10a8cac5c95&">
   <meta property="og:url" content="https://izcc-summer.web.app/">
   <meta property="og:type" content="活動報名網站">
 
@@ -21,7 +22,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <script src="https://kit.fontawesome.com/063d95bd47.js" crossorigin="anonymous"></script>
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -38,24 +41,22 @@
 <body>
 
   <!-- ======= Intro Animation Overlay ======= -->
-  <div id="intro-overlay" style="position:fixed;inset:0;z-index:9999;background:#000;display:flex;align-items:center;justify-content:center;">
-    <iframe src="open-animation/index.html" 
-      style="width:100vw;height:100vh;max-width:100%;border:none;background:#000;"
-      title="IZCC Intro Animation"
-      id="intro-iframe"
-      allow="autoplay">
+  <div id="intro-overlay"
+    style="position:fixed;inset:0;z-index:9999;background:#000;display:flex;align-items:center;justify-content:center;">
+    <iframe src="open-animation/" style="width:100vw;height:100vh;max-width:100%;border:none;background:#000;"
+      title="IZCC Intro Animation" id="intro-iframe" allow="autoplay">
     </iframe>
   </div>
   <script>
-    (function() {
+    (function () {
       var overlay = document.getElementById('intro-overlay');
       var iframe = document.getElementById('intro-iframe');
       function removeOverlay() {
         overlay.style.transition = 'opacity 0.6s ease';
         overlay.style.opacity = '0';
-        setTimeout(function() { overlay.remove(); }, 700);
+        setTimeout(function () { overlay.remove(); }, 700);
       }
-      window.addEventListener('message', function(e) {
+      window.addEventListener('message', function (e) {
         if (e.data && e.data.type === 'intro-complete') {
           removeOverlay();
         }
@@ -63,7 +64,7 @@
       // Fallback: auto-dismiss after 14s if animation hangs
       setTimeout(removeOverlay, 14000);
       // Prevent flash of white if animation loads first
-      window.addEventListener('load', function() { iframe.style.opacity = '1'; });
+      window.addEventListener('load', function () { iframe.style.opacity = '1'; });
     })();
   </script>
 
@@ -72,31 +73,34 @@
     <div class="hero-container" data-aos="zoom-in">
       <a class="hero-logo"><img src="assets/img/hero-logo.png" alt=""></a>
       <div class="center">
-        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfKSj-8RF4dyPxwDAZ0iZT7H7RmnvgG5FVmzHT6WtdxiHcEmA/viewform"><button class="btn2" >
-          <svg width="360px"  height="80px" viewBox="0 0 366 80" class="border">
-            <polyline points="360,1 360,78 2,78 2,2 360,2" class="bg-line" />
-            <polyline points="360,1 360,78 2,78 2,2 360,2" class="hl-line" />
-          </svg>
-          <span>立即報名</span>
-        </button></a>
+        <a target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfKSj-8RF4dyPxwDAZ0iZT7H7RmnvgG5FVmzHT6WtdxiHcEmA/viewform"><button
+            class="btn2">
+            <svg width="360px" height="80px" viewBox="0 0 366 80" class="border">
+              <polyline points="360,1 360,78 2,78 2,2 360,2" class="bg-line" />
+              <polyline points="360,1 360,78 2,78 2,2 360,2" class="hl-line" />
+            </svg>
+            <span>立即報名</span>
+          </button></a>
       </div>
       <div class="center2">
-        <a href="#about" ><button class="btn2" >
-          <svg width="360px"  height="80px" viewBox="0 0 366 80" class="border">
-            <polyline points="360,1 360,78 2,78 2,2 360,2" class="bg-line" />
-            <polyline points="360,1 360,78 2,78 2,2 360,2" class="hl-line" />
-          </svg>
-          <span>了解資訊</span>
-        </button></a>
+        <a href="#about"><button class="btn2">
+            <svg width="360px" height="80px" viewBox="0 0 366 80" class="border">
+              <polyline points="360,1 360,78 2,78 2,2 360,2" class="bg-line" />
+              <polyline points="360,1 360,78 2,78 2,2 360,2" class="hl-line" />
+            </svg>
+            <span>了解資訊</span>
+          </button></a>
       </div>
 
     </div>
-    
+
   </section><!-- End Hero -->
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
+      <h1 id="header-section-title" class="header-section-title d-md-none">暑訓簡介</h1>
 
 
 
@@ -105,8 +109,8 @@
           <li><a class="nav-link scrollto active" href="#hero">首頁</a></li>
           <li><a class="nav-link scrollto" href="#about">暑訓簡介</a></li>
           <li><a class="nav-link scrollto" href="#activity">活動介紹</a></li>
+          <li><a class="nav-link scrollto" href="#schedule">行程表</a></li>
           <li><a class="nav-link scrollto" href="#course">課程介紹</a></li>
-          <li><a class="nav-link scrollto" href="#club">社團簡介</a></li>
           <li><a class="nav-link scrollto" href="#signup">立即報名</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -117,30 +121,111 @@
 
   <main id="main">
 
-    <!-- ======= About Us Section ======= -->
+    <!-- ======= About Us Section (暑訓簡介) ======= -->
     <section id="about" class="about">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
 
-        <div class="section-title" data-aos="fade-up">
+        <div class="section-title">
           <h2>暑訓簡介</h2>
           <p>認識 IZCC 四校聯合暑訓</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-right">
-            <div class="image">
-              <img src="assets/img/about.jpg" class="img-fluid" alt="">
+        <div class="row gy-4 align-items-center">
+          <!-- Left: Intro Content -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="content">
+              <h3>IZCC 四校聯合暑訓</h3>
+              <p class="intro-p">
+                由建中資訊（INFOR）、成功電研（CKCSC）、中山資研（ZSISC）、景美電資（CMIOC）舉辦一年一度的大型活動！參加四校聯合暑訓會是你上高中前最不後悔的決定！在這七天中你可以認識更多升高中的朋友來拓展你的交友圈，也會在活動當中更熟悉高中生活，認識更多學長姊。
+              </p>
+              <p class="intro-p">
+                同時又可以學習更多關於 Python、C++、Tkinter、網頁設計的知識，還會參觀資訊產業的公司，也當然會讓大家遊玩各式各樣好玩的神秘活動，期待你們的參與！
+              </p>
             </div>
           </div>
-          <div class="col-lg-6" data-aos="fade-left">
-            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 ">
-              <h3>IZCC四校聯合暑訓</h3>
-              <p>
-                由建中資訊（INFOR）、中山資研（ZSISC）、成功電研（CKCSC）、景美電資（CMIOC）舉辦一年一度的大型活動！參加四校聯合暑訓會是你上高中前最不後悔的決定！在這七天中你可以認識更多升高中的朋友來拓展你的交友圈，也會在活動當中更熟悉高中生活，認識更多學長姊。
-              </p>
-              <p>
-                同時又可以學習更多關於Python、C++、tkinter、網頁設計的知識，還會參觀資訊產業的公司，也當然會讓大家遊玩各式各樣好玩的神秘活動，期待你們的參與！
-              </p>
+
+          <!-- Right: 2x2 Club Grid (Hover Expand) -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="club-grid-container">
+              <div class="club-window-grid">
+
+                <!-- Club 1: INFOR -->
+                <div class="club-window-card" onclick="this.classList.toggle('flipped')">
+                  <div class="club-window-inner">
+                    <div class="club-window-front">
+                      <div class="club-badge-wrapper">
+                        <img src="assets/img/club/club-1.jpg" alt="INFOR Badge" class="club-badge-img">
+                      </div>
+                      <h4 class="club-name">INFOR</h4>
+                      <span class="club-subname">建中資訊</span>
+                    </div>
+                    <div class="club-window-back">
+                      <h4 class="club-back-title">INFOR 37th</h4>
+                      <p class="club-desc">建中資訊社是一個以電腦科技為主題的社團，歡迎對程式設計、網頁製作、遊戲開發、人工智慧等領域有興趣的同學加入！</p>
+                      <a href="https://www.instagram.com/infor_37th/" target="_blank" class="club-link"><i
+                          class="bi bi-instagram"></i> Instagram</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Club 2: CKCSC -->
+                <div class="club-window-card" onclick="this.classList.toggle('flipped')">
+                  <div class="club-window-inner">
+                    <div class="club-window-front">
+                      <div class="club-badge-wrapper">
+                        <img src="assets/img/club/club-2.jpg" alt="CKCSC Badge" class="club-badge-img">
+                      </div>
+                      <h4 class="club-name">CKCSC</h4>
+                      <span class="club-subname">成功電研</span>
+                    </div>
+                    <div class="club-window-back">
+                      <h4 class="club-back-title">CKCSC 37th</h4>
+                      <p class="club-desc">成功電研是個溫馨的大家庭，從零基礎教起，有系統地介紹各種資訊與電算領域知識，並舉辦多校交流活動！</p>
+                      <a href="https://www.instagram.com/ckcsc37th_diary/" target="_blank" class="club-link"><i
+                          class="bi bi-instagram"></i> Instagram</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Club 3: ZSISC -->
+                <div class="club-window-card" onclick="this.classList.toggle('flipped')">
+                  <div class="club-window-inner">
+                    <div class="club-window-front">
+                      <div class="club-badge-wrapper">
+                        <img src="assets/img/club/club-3.jpg" alt="ZSISC Badge" class="club-badge-img">
+                      </div>
+                      <h4 class="club-name">ZSISC</h4>
+                      <span class="club-subname">中山資研</span>
+                    </div>
+                    <div class="club-window-back">
+                      <h4 class="club-back-title">ZSISC 31st</h4>
+                      <p class="club-desc">中山資研又稱楓資，主要學習 C++ 程式設計。無論是程式新手還是電神，都歡迎與我們一起探索資訊世界的樂趣！</p>
+                      <a href="https://www.instagram.com/zsisc._.31st/" target="_blank" class="club-link"><i
+                          class="bi bi-instagram"></i> Instagram</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Club 4: CMIOC -->
+                <div class="club-window-card" onclick="this.classList.toggle('flipped')">
+                  <div class="club-window-inner">
+                    <div class="club-window-front">
+                      <div class="club-badge-wrapper">
+                        <img src="assets/img/club/club-4.jpg" alt="CMIOC Badge" class="club-badge-img">
+                      </div>
+                      <h4 class="club-name">CMIOC</h4>
+                      <span class="club-subname">景美電資</span>
+                    </div>
+                    <div class="club-window-back">
+                      <h4 class="club-back-title">CMIOC 31st</h4>
+                      <p class="club-desc">景美女中電腦資訊社，致力於推廣科技與計算機知識，提供豐富的學習與實作機會。歡迎熱愛程式與科技的妳！</p>
+                      <a href="https://www.instagram.com/cmioc_31st/" target="_blank" class="club-link"><i
+                          class="bi bi-instagram"></i> Instagram</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
@@ -148,324 +233,332 @@
       </div>
     </section><!-- End About Us Section -->
 
-    <!-- ======= activity Section ======= -->
+        <!-- ======= activity Section (活動介紹) ======= -->
     <section id="activity" class="activity">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
 
-        <div class="section-title" data-aos="fade-up">
+        <div class="section-title">
           <h2>活動介紹</h2>
-          <p>我們在7天中的6天都安排了有趣的不同活動</p>
+          <p>豐富有趣的營隊活動，等你來體驗！</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-6 order-2 order-lg-1">
-            <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up">
-              <i class="bx bx-happy"></i>
-              <h4>Day 1 - 大地遊戲</h4>
-              <p>大地遊戲又名曠野遊戲、越野遊戲。在這次的暑訓中，我們會於中正紀念堂由玩大地遊戲，過程中會有許多好玩、刺激的關卡，每一小隊會在大地遊戲中盡全力在每一關中拿取分數，並且在最後爭取最高名次！</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-buildings"></i>
-              <h4>Day 2 - 企業參訪</h4>
-              <p>以後想成為工程師嗎？那你絕對不能錯過這項活動！我們即將前往「精誠資訊」，精誠資訊 SYSTEX Corporation 成立於 1997 年，是台灣資訊服務產業龍頭企業，擁有近 3,000 名員工，位居台灣前一百大服務業。我們將邀請企業的員工，來為我們講解工程師的生活。</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-shield"></i>
-              <h4>Day 3 - RPG</h4>
-              <p>只有玩過線上版的 RPG 嗎?那你一定要來體驗看真人版 RPG。有著刺激且燒腦的劇情跟關卡等你來破解，至於劇情是什麼，等你來就知道拉!</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-walk"></i>
-              <h4>Day 4 - 大型團康活動</h4>
-              <p>在日常生活中，我們常常因為生活過於忙碌而忘了關心周遭。而在這個活動中，我們將帶領更加認識雙北，敬請期待! 詳細活動內容，等你來就知道了！</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-dice-3"></i>
-              <h4>Day 5 - 趣味遊戲</h4>
-              <p>將搭配著許多桌遊、神秘小遊戲，在一次次精彩的奮鬥與交戰中，成為最終的贏家！</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="600">
-              <i class="bx bx-question-mark"></i>
-              <h4>Day 7 - 神秘活動</h4>
-              <p>為此營隊中最精彩的活動，會讓你們有個難忘的夜晚，知道是什麼就不好玩啦，敬請期待！</p>
+        <div class="row gy-4 align-items-center">
+          <!-- Left: Group Photo -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="activity-image-wrapper">
+              <img src="assets/img/activity.jpg" class="img-fluid rounded-4 shadow-lg" alt="活動合照">
             </div>
           </div>
-          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/activity.jpg");' data-aos="fade-left" data-aos-delay="100"></div>
+
+          <!-- Right: Day by Day Description -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="activity-days-list">
+              
+              <div class="activity-day-item">
+                <div class="day-badge">Day 1</div>
+                <div class="day-details">
+                  <h4>大地遊戲</h4>
+                  <p>在寬廣的場地中進行小隊對抗，透過各種關卡與趣味競賽，拉近團員們的距離並爭取最高榮譽！</p>
+                </div>
+              </div>
+
+              <div class="activity-day-item">
+                <div class="day-badge">Day 2</div>
+                <div class="day-details">
+                  <h4>企業參訪</h4>
+                  <p>造訪知名資訊科技公司，深入了解業界運作，並邀請工程師學長姊分享寶貴的工作與學習經驗。</p>
+                </div>
+              </div>
+
+              <div class="activity-day-item">
+                <div class="day-badge">Day 3</div>
+                <div class="day-details">
+                  <h4>RPG 角色扮演遊戲</h4>
+                  <p>真人實體 RPG！燒腦解謎與劇情推進，考驗你的觀察力、邏輯推理以及團隊默契！</p>
+                </div>
+              </div>
+
+              <div class="activity-day-item">
+                <div class="day-badge">Day 4</div>
+                <div class="day-details">
+                  <h4>大型團康活動</h4>
+                  <p>走出戶外探索雙北，結合各類創意互動任務，一起創造熱血又難忘的回憶！</p>
+                </div>
+              </div>
+
+              <div class="activity-day-item">
+                <div class="day-badge">Day 5</div>
+                <div class="day-details">
+                  <h4>桌遊與趣味競賽</h4>
+                  <p>考驗智慧與運氣的趣味桌遊與團體遊戲，看哪個小隊能成為最後的贏家！</p>
+                </div>
+              </div>
+
+              <div class="activity-day-item">
+                <div class="day-badge">Day 6</div>
+                <div class="day-details">
+                  <h4>神秘活動</h4>
+                  <p>營隊的壓軸重頭戲，最具氛圍感與情感連結的難忘之夜，敬請期待！</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
 
       </div>
     </section><!-- End activity Section -->
 
- 
+    <!-- ======= schedule Section (行程表) ======= -->
+    <section id="schedule" class="schedule section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>行程表</h2>
+          <p>營隊詳細行程安排，伴你度過難忘的七天！</p>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="table-responsive timetable-wrapper shadow-lg rounded-4">
+              <table class="table timetable-table align-middle text-center mb-0">
+                <thead>
+                  <tr>
+                    <th>時間</th>
+                    <th>8/1 (六)</th>
+                    <th>8/2 (日)</th>
+                    <th>8/3 (一)</th>
+                    <th>8/4 (二)</th>
+                    <th>8/5 (三)</th>
+                    <th>8/6 (四)</th>
+                    <th>8/7 (五)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="time-col"><strong>8:00<br>~<br>9:00</strong></td>
+                    <td><span class="activity-tag game">破冰遊戲</span><br><span class="loc-text">中正紀念堂</span></td>
+                    <td><span class="activity-tag warm">集合早操</span><br><span class="loc-text">成功電教</span></td>
+                    <td><span class="activity-tag warm">集合早操</span><br><span class="loc-text">中山電教</span></td>
+                    <td><span class="activity-tag warm">集合早操</span><br><span class="loc-text">中山電教</span></td>
+                    <td><span class="activity-tag game">團康遊戲</span><br><span class="loc-text">雙北景點</span></td>
+                    <td><span class="activity-tag warm">集合早操</span><br><span class="loc-text">成功電教</span></td>
+                    <td><span class="activity-tag warm">集合早操</span><br><span class="loc-text">中山電教</span></td>
+                  </tr>
+                  <tr>
+                    <td class="time-col"><strong>9:00<br>~<br>12:00</strong></td>
+                    <td><span class="activity-tag game">大地遊戲</span><br><span class="loc-text">中正紀念堂</span></td>
+                    <td><span class="activity-tag class-py">discord.py</span><br><span class="loc-text">成功電教</span></td>
+                    <td><span class="activity-tag class-web">網頁前端</span><br><span class="loc-text">中山電教</span></td>
+                    <td><span class="activity-tag class-cpp">C++</span><br><span class="loc-text">中山電教</span></td>
+                    <td><span class="activity-tag game">團康遊戲</span><br><span class="loc-text">雙北景點</span></td>
+                    <td><span class="activity-tag class-py">Python Turtle</span><br><span class="loc-text">成功電教</span></td>
+                    <td><span class="activity-tag special">成果發表</span><br><span class="loc-text">中山電教</span></td>
+                  </tr>
+                  <tr>
+                    <td class="time-col"><strong>12:00<br>~<br>13:00</strong></td>
+                    <td><span class="activity-tag rest">午休</span><br><span class="loc-text">成功視聽教室</span></td>
+                    <td><span class="activity-tag rest">午休</span><br><span class="loc-text">成功視聽教室</span></td>
+                    <td><span class="activity-tag rest">午休</span><br><span class="loc-text">中山</span></td>
+                    <td><span class="activity-tag rest">午休</span><br><span class="loc-text">中山</span></td>
+                    <td><span class="activity-tag game">團康遊戲</span><br><span class="loc-text">雙北景點</span></td>
+                    <td><span class="activity-tag rest">午休</span><br><span class="loc-text">成功視聽教室</span></td>
+                    <td><span class="activity-tag rest">午休</span><br><span class="loc-text">中山</span></td>
+                  </tr>
+                  <tr>
+                    <td class="time-col"><strong>13:00<br>~<br>16:00</strong></td>
+                    <td><span class="activity-tag class-py">Python</span><br><span class="loc-text">成功電教</span></td>
+                    <td><span class="activity-tag game">RPG</span><br><span class="loc-text">花博</span></td>
+                    <td><span class="activity-tag special">企業參訪</span><br><span class="loc-text">待定 (~ 17:00)</span></td>
+                    <td><span class="activity-tag game">趣味遊戲</span><br><span class="loc-text">中山 (~ 17:00)</span></td>
+                    <td><span class="activity-tag game">團康遊戲</span><br><span class="loc-text">雙北景點 (~ 21:00)</span></td>
+                    <td><span class="activity-tag special">KAHOOT &<br>成發準備</span><br><span class="loc-text">成功電教</span></td>
+                    <td><span class="activity-tag party">結訓晚會</span><br><span class="loc-text">建中夢紅樓 (~ 21:00)</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End schedule Section -->
 
-    <!-- ======= course Section ======= -->
-
-    <div class="section-title" data-aos="fade-up">
-      <h2>課程介紹</h2>
-      <p>我們有許多不同的資訊相關課程，一起來認識這些課程吧！</p>
-    </div>
-
+    <!-- ======= course Section (課程介紹) ======= -->
     <section id="course" class="course">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
+        
+        <div class="section-title">
+          <h2>課程介紹</h2>
+          <p>我們有許多不同的資訊相關課程，一起來認識這些課程吧！</p>
+        </div>
 
-        <div class="row">
-          <div class="col-lg-5 order-2 order-lg-1 align-items-stretch video-box" style='background-image: url("assets/img/course.jpg");' data-aos="zoom-in">
-
-          </div>
-          <div class="col-lg-7 order-1 order-lg-2 d-flex flex-column justify-content-center align-items-stretch">
-
-            <div class="content" data-aos="fade-up">
-              <h3>學習新知</h3>
-              <p>
-                在營隊中，你不光可以參加有趣的活動，更可以學到扎實的學術知識！我們將以淺顯易懂的方式讓即使是<strong>零基礎也可以學會！</strong>
-              </p>
+        <div class="row gy-4">
+          <!-- Left: Group Photo -->
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+            <div class="course-image-wrapper">
+              <img src="assets/img/course.webp" class="img-fluid rounded-4 shadow-lg" alt="課程合照">
             </div>
-
-            <div class="accordion-list">
-              <ul>
-                <li data-aos="fade-up" data-aos-delay="100">
-                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> C++ <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                    <p>
-                      歡迎來到基礎C++課程！在這裡，你將踏上學習C++的旅程，掌握其核心概念和實用技巧。我們將深入淺出的學習以下主題，讓你能夠建立堅實的程式設計基礎。課程內容包含：
-                    </p>
-                    <p>
-                      - 編寫C++的電腦環境配置
-                    </p>
-                    <p>
-                      - 輸入/輸出
-                    </p>
-                    <p>
-                      - 各種變數型態與其應用
-                    </p>
-                    <p>
-                      - if else判斷式
-                    </p>
-                    <p>
-                      - 各類運算子
-                    </p>
-                    <p>
-                      - for while迴圈
-                    </p>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="200">
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> 演算法 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      本課程將以理論結合實踐，幫助學員掌握演算法的基本概念和應用技巧，為後續的高階學習打下堅實的基礎。
-演算法課程內容涵蓋以下主題：
-                    </p>
-                    <p>
-                      - 何謂演算法
-                    </p>
-                    <p>
-                      - 演算法複雜度分析
-                    </p>
-                    <p>
-                      - 基礎遞迴觀念
-                    </p>
-                    <p>
-                      - 基礎演算法與例題
-                    </p>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="300">
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> HTML & CSS <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      呀勒呀勒，大小姐 is time to寫網頁嘍—想了解HTML網頁的基本架構嗎？本次的課程會向各位大小姐們介紹網頁的基礎-HTML，HTML是一種標記語言常用於建立網頁。我們還會深入的介紹HTML的基本語法。什麼？大小姐擔心從來都沒學過？沒關係，我們的課程是從0開始！0基礎也沒問題！準備好了嗎大小姐？課程內容包含：
-                    </p>
-                    <p>
-                      - 網頁的結構
-                    </p>
-                    <p>
-                      - 網頁的常用標籤(連接/表單/結構元素)
-                    </p>
-                    <p>
-                      - 階層樣式表 CSS
-                    </p>
-                    <p>
-                      - CSS 選擇器
-                    </p>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="400">
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>04</span> Discord 機器人 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Discord 是一個高度自定義的社群軟體，課程中會帶你使用Python一步步完成自己的機器人，讓你能夠將Discord內的各種操作自動化！以下是課程會學到的內容：  
-                    </p>
-                    <p>
-                      - Discord的基本介紹
-                    </p>
-                    <p>
-                      - Discord 機器人的原理
-                    </p>
-                    <p>
-                      - 身份組、頻道、成員、表符、伺服器等等的管理。
-                    </p>
-                      - 設計自定義的酷酷指令
-                    <p>
-                      - 在自己的網站中用 Discord 登入
-                    </p>
-                    <p>
-                      - 更多內容敬請期待！
-                    </p>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="500">
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed"><span>05</span> Python <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Python 是一款非常適合初學者的程式語言，因其語意簡單直白的特性，在行業中非常受歡迎，如現在最流行的AI，程式大部分都是由Python撰寫，在這個課程中，將會由淺入深，帶著你學會課程內容包含：
-                    </p>
-                    <p>
-                      - Python的基礎語法
-                    </p>
-                    <p>
-                      - 程式語言的運作方式
-                    </p>
-                    <p>
-                      - Python進階用法
-                    </p>
-                    <p>
-                      - 專案實作
-                    </p>
-                  </div>
-                </li>
-
-                <li data-aos="fade-up" data-aos-delay="600">
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-6" class="collapsed"><span>06</span> Tkinter <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-6" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Tkinter 是Python中標準的GUI（圖形用戶界面）工具包，可用於製作小遊戲或創建簡易的應用工具。透過Tkinter，你可以輕鬆的做出視覺化界面，無需了解複雜的圖形程式設計技巧，在這課程你可以學到:  
-                    </p>
-                    <p>
-                      - 建立視窗界面
-                    </p>
-                    <p>
-                      - 運用元件製作出按鈕、輸入框等功能
-                    </p>
-                    <p>
-                      - 佈局管理
-                    </p>
-                    <p>
-                      - 事件驅動等相關內容
-                    </p>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
-
           </div>
 
-  
+          <!-- Right: Navigation Rail + Content Area -->
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+            <div class="course-rail-container">
+              <div class="row g-3">
+                
+                <!-- Left: Navigation Rail -->
+                <div class="col-sm-4">
+                  <div class="nav flex-column nav-pills course-rail" id="course-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <button class="nav-link active" id="tab-web" data-bs-toggle="pill" data-bs-target="#content-web"
+                      type="button" role="tab" aria-controls="content-web" aria-selected="true">
+                      <img src="assets/img/courses/html5.svg" class="rail-icon" alt=""> 網頁前端
+                    </button>
+                    <button class="nav-link" id="tab-dc" data-bs-toggle="pill" data-bs-target="#content-dc"
+                      type="button" role="tab" aria-controls="content-dc" aria-selected="false">
+                      <img src="assets/img/courses/python-discord.svg" class="rail-icon" alt=""> Discord.py
+                    </button>
+                    <button class="nav-link" id="tab-cpp" data-bs-toggle="pill" data-bs-target="#content-cpp"
+                      type="button" role="tab" aria-controls="content-cpp" aria-selected="false">
+                      <img src="assets/img/courses/cpp.svg" class="rail-icon" alt=""> C++
+                    </button>
+                    <button class="nav-link" id="tab-python" data-bs-toggle="pill" data-bs-target="#content-python"
+                      type="button" role="tab" aria-controls="content-python" aria-selected="false">
+                      <img src="assets/img/courses/python.svg" class="rail-icon" alt=""> Python
+                    </button>
+                    <button class="nav-link" id="tab-turtle" data-bs-toggle="pill" data-bs-target="#content-turtle"
+                      type="button" role="tab" aria-controls="content-turtle" aria-selected="false">
+                      <img src="assets/img/courses/python-turtle.svg" class="rail-icon" alt=""> Python turtle
+                    </button>
+                  </div>
+                </div>
 
+                <!-- Right: Content Display -->
+                <div class="col-sm-8">
+                  <div class="tab-content course-tab-content" id="course-tabContent">
+                    
+                    <!-- Content 1: Web Front-end -->
+                    <div class="tab-pane fade show active" id="content-web" role="tabpanel" aria-labelledby="tab-web">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="d-flex align-items-center"><img src="assets/img/courses/html5.svg" class="content-icon" alt="">網頁前端</h3>
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill font-weight-bold" style="font-size: 13px;">負責人：陳柏祐</span>
+                      </div>
+                      <p class="course-intro-text">
+                        本課程主要介紹網站介面設計與互動開發的基礎知識。學習 HTML、CSS 與 JavaScript 的核心概念，了解網頁結構、版面配置與動態效果的製作方式。透過實作練習，設計出美觀且具互動性的網頁。
+                      </p>
+                      <ul class="course-topics">
+                        <li><i class="bi bi-check-circle-fill"></i> 網頁結構介紹</li>
+                        <li><i class="bi bi-check-circle-fill"></i> HTML</li>
+                        <li><i class="bi bi-check-circle-fill"></i> CSS</li>
+                        <li><i class="bi bi-check-circle-fill"></i> JavaScript</li>
+                      </ul>
+                    </div>
+
+                    <!-- Content 2: Discord.py -->
+                    <div class="tab-pane fade" id="content-dc" role="tabpanel" aria-labelledby="tab-dc">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="d-flex align-items-center"><img src="assets/img/courses/python-discord.svg" class="content-icon" alt="">Discord.py</h3>
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill font-weight-bold" style="font-size: 13px;">負責人：鄭紹禹</span>
+                      </div>
+                      <p class="course-intro-text">
+                        本課程使用 Python 以及 discord.py 函式庫進行 DC Bot 教學開發，學習 discord.py 使用的非同步語法 (async & await) ，從基礎 (建置機器人取得 Token, 設置 Python 環境) 一步步到實作 (連結外部 API, 進階功能)。
+                      </p>
+                      <ul class="course-topics">
+                        <li><i class="bi bi-check-circle-fill"></i> 非同步 Python 語法 (async, await)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 環境建置 (創建 DC Bot, discord.py 安裝)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 基礎機器人功能 (偵測訊息、發送訊息)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 進階機器人功能 (連結外部 API, 使用 Embed 以及其他元件製作可互動的簡易使用者介面)</li>
+                      </ul>
+                    </div>
+
+                    <!-- Content 3: C++ -->
+                    <div class="tab-pane fade" id="content-cpp" role="tabpanel" aria-labelledby="tab-cpp">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="d-flex align-items-center"><img src="assets/img/courses/cpp.svg" class="content-icon" alt="">C++</h3>
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill font-weight-bold" style="font-size: 13px;">負責人：賴語穗</span>
+                      </div>
+                      <p class="course-intro-text">
+                        這是一個基礎的 C++ 課程！在這裡，我們將讓你掌握核心觀念與實用技巧，我們將深入淺出的認識以下主題，讓你對 C++ 語法有更基本的認識。
+                      </p>
+                      <ul class="course-topics">
+                        <li><i class="bi bi-check-circle-fill"></i> 編寫 C++ 的電腦環境配置</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 輸入／輸出</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 各種變數型態與應用</li>
+                        <li><i class="bi bi-check-circle-fill"></i> if-else 條件判斷</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 運算子</li>
+                        <li><i class="bi bi-check-circle-fill"></i> for / while 迴圈</li>
+                      </ul>
+                    </div>
+
+                    <!-- Content 4: Python -->
+                    <div class="tab-pane fade" id="content-python" role="tabpanel" aria-labelledby="tab-python">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="d-flex align-items-center"><img src="assets/img/courses/python.svg" class="content-icon" alt="">Python</h3>
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill font-weight-bold" style="font-size: 13px;">負責人：王裕佳</span>
+                      </div>
+                      <p class="course-intro-text">
+                        Python 是一種語法簡潔、易於閱讀且受歡迎的程式語言，非常適合初學者。你將掌握其核心概念和實用技巧，我們將深入淺出地學習以下主題，讓你能夠建立堅實的程式設計基礎。還有更多有趣的內容等你來學習！
+                      </p>
+                      <ul class="course-topics">
+                        <li><i class="bi bi-check-circle-fill"></i> 環境認識與準備</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 各種變數型態與其應用</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 運算</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 條件</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 迴圈</li>
+                      </ul>
+                    </div>
+
+                    <!-- Content 5: Python turtle -->
+                    <div class="tab-pane fade" id="content-turtle" role="tabpanel" aria-labelledby="tab-turtle">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="d-flex align-items-center"><img src="assets/img/courses/python-turtle.svg" class="content-icon" alt="">Python turtle</h3>
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill font-weight-bold" style="font-size: 13px;">負責人：林羿秀</span>
+                      </div>
+                      <p class="course-intro-text">
+                        Welcome to the world of Python Turtle! 歡迎來到海龜繪圖的奇幻世界！在這堂課中，我們將透過最直觀的圖形化反饋，帶領你一手掌握 Python 的程式核心邏輯。你將透過指揮小海龜在螢幕上爬行，創作出屬於你的數位幾何藝術品！本課程將循序漸進，從基礎線條到靈活運用迴圈創作璀璨星空與萬花筒圖案，帶領大家把腦中的想像具象化為現實！
+                      </p>
+                      <ul class="course-topics">
+                        <li><i class="bi bi-check-circle-fill"></i> turtle 基礎控制：畫布初始化、海龜前後移動、旋轉與座標系統概念</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 色彩與畫筆藝術：調整畫筆粗細、自訂色彩、圖形填色技巧</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 結構化你的畫作：靈活運用 for 迴圈繪製多邊形與幾何圖形</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 專案實作：生成你想要的圖形</li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
     </section><!-- End course Section -->
 
-    <!-- ======= club Section ======= -->
-    <section id="club" class="club">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>社團介紹</h2>
-          <p>IZCC 四校聯合暑訓是由四校的四個社團一起舉辦的，來認識它們吧！</p>
+    <!-- ======= signup Section (報名表單) ======= -->
+    <section id="signup" class="signup section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>報名表單</h2>
+          <p>準備好加入我們了嗎？點擊下方按鈕前往報名！</p>
         </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="zoom-in">
-              <div class="member-img">
-                <img src="assets/img/club/club-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a target="_blank" href="https://www.instagram.com/infor_37th/"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>INFOR 37th</h4>
-                <span>一建國中學資訊社37屆一</span>
-                <p>建中資訊社是一個以電腦科技為主題的社團，歡迎對程式設計、網頁製作、遊戲開發、人工智慧等領域有興趣的同學加入。在資訊社，你可以學習到最新的資訊技術，並且與其他社員一起分享作品與想法。</p>
-              </div>
-            </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKSj-8RF4dyPxwDAZ0iZT7H7RmnvgG5FVmzHT6WtdxiHcEmA/viewform"
+              target="_blank" class="btn-signup-link">
+              <button class="btn2">
+                <svg width="360px" height="80px" viewBox="0 0 366 80" class="border">
+                  <polyline points="360,1 360,78 2,78 2,2 360,2" class="bg-line" />
+                  <polyline points="360,1 360,78 2,78 2,2 360,2" class="hl-line" />
+                </svg>
+                <span>前往填寫報名表單</span>
+              </button>
+            </a>
           </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/club/club-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a target="_blank" href="https://www.instagram.com/ckcsc37th_diary/"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>CKCSC 37th</h4>
-                <span>一成功高中電子計算機研習社37屆一</span>
-                <p>「成功高中電子計算機研習社 Cheng Gong Computer Study Club」簡稱成功電研CKCSC，是一個成功高中內的學術性社團，在社課會教一些關於資訊領域的課程，會有學長帶你從0開始學，也會有進階班，歡迎學弟加入電研社的大家庭！
-                  除了教學課程，我們也與IZCC分別是建中資訊、中山資研、景美電資等三校，一同合辦許多活動與聯課，並且也會在放學後與四校共同開設課程，提供四校學弟妹與友校們交流的機會。</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/club/club-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a target="_blank" href="https://www.instagram.com/zsisc._.31st/"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>ZSISC 31st</h4>
-                <span>一中山女高資訊研究社31屆一</span>
-                <p>中山資研，又稱楓資，全名為中山女高資訊研究社，社課主要以教學C++為主，無論是程式新手或是電神，都可以跟幹部們一起學習，我們也會分享有關於資訊方面的事情，在放學後也有自由選擇是否參加的不同課程，同時我們也有許多與友校交流的活動，只要對於資訊方面有興趣的學妹，或是想嘗試看看的，都歡迎加入楓資！</p>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/club/club-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a target="_blank" href="https://www.instagram.com/cmioc_31st/"><i class="bi bi-instagram"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>CMIOC 31st</h4> 
-                <span>一景美女中電腦資訊社31屆一</span>
-                <p>歡迎來到景美女中的電腦資訊社！我們是一個致力於推廣科技與計算機知識的社團，擁有豐富的學習與實踐機會。不論你是對編程充滿熱情的新手，還是想進一步探索電腦科學領域的高手，我們都歡迎你加入我們的行列。</p>
-              </div>
-            </div>
-          </div>
-
         </div>
-
       </div>
-    </section><!-- End club Section -->
-    <div class="section-title" data-aos="fade-up">
-      <h2>報名表單</h2>
-      <p>若表單無法正常顯示，請按首頁的"立即報名"按鈕。</p>
-    </div>
-  <!-- ======= signup Section ======= -->
-    <section id="signup" class="signup">
-      <div class="formgoogle1">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfKSj-8RF4dyPxwDAZ0iZT7H7RmnvgG5FVmzHT6WtdxiHcEmA/viewform" class="formgoogle"></iframe>
-      </div>
-  </section><!-- End signup Section -->
+    </section><!-- End signup Section -->
 
-</main><!-- End #main -->
+  </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
@@ -476,15 +569,19 @@
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <a href="#header" class="scrollto footer-logo"><img src="assets/img/hero-logo.png" alt=""></a>
-            </div>
+          </div>
         </div>
 
         <div class="social-links">
-          <a href="https://www.threads.net/@izcc.summercamp.2024" target="_blank" class="threads"><i class="fa-brands fa-threads"></i></a> 
-          <a href="https://www.facebook.com/profile.php?id=61560876704078" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/izcc.summercamp.2024/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.threads.net/@izcc.summercamp.2024" target="_blank" class="threads"><i
+              class="fa-brands fa-threads"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61560876704078" target="_blank" class="facebook"><i
+              class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/izcc.summercamp.2026" target="_blank" class="instagram"><i
+              class="bx bxl-instagram"></i></a>
           <a href="mailto:izccsummercamp2024@gmail.com" target="_blank" class="gmail"><i class="bx bxl-gmail"></i></a>
-          <a href="https://tellonym.me/izccsummercamp2024" target="_blank" class="tellonym"><i class="fa-regular fa-message"></i></a>
+          <a href="https://tellonym.me/izccsummercamp2024" target="_blank" class="tellonym"><i
+              class="fa-regular fa-message"></i></a>
         </div>
 
       </div>
@@ -492,7 +589,8 @@
 
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -505,6 +603,46 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+    // Mobile active section header title scroll sync
+    (function() {
+      const sections = document.querySelectorAll('section');
+      const headerTitle = document.getElementById('header-section-title');
+      const sectionNameMap = {
+        'hero': '首頁',
+        'about': '暑訓簡介',
+        'activity': '活動介紹',
+        'schedule': '行程表',
+        'course': '課程介紹',
+        'signup': '報名表單'
+      };
+      
+      function updateMobileHeaderTitle() {
+        if (window.innerWidth > 768) return;
+        let currentSectionId = 'about';
+        const scrollPosition = window.scrollY + 120;
+        
+        sections.forEach(sec => {
+          if (scrollPosition >= sec.offsetTop && scrollPosition < sec.offsetTop + sec.offsetHeight) {
+            currentSectionId = sec.id;
+          }
+        });
+        
+        const titleText = sectionNameMap[currentSectionId] || '';
+        if (headerTitle && headerTitle.textContent !== titleText && titleText) {
+          headerTitle.classList.add('fade-out');
+          setTimeout(function() {
+            headerTitle.textContent = titleText;
+            headerTitle.classList.remove('fade-out');
+          }, 200);
+        }
+      }
+      
+      window.addEventListener('scroll', updateMobileHeaderTitle);
+      window.addEventListener('resize', updateMobileHeaderTitle);
+      updateMobileHeaderTitle();
+    })();
+  </script>
 </body>
 
 </html>
