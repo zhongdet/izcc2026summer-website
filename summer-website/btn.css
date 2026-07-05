@@ -4,8 +4,8 @@
   width: 360px;
   height: 80px;
   cursor: pointer;
-  background-color: #00000083;
-  border: 1px solid #FFD700;
+  background-color: #121b3c;
+  border: 1px solid #7298c6;
   outline: none;
   transition: 1s ease-in-out;
 }
@@ -26,7 +26,7 @@ svg {
   left: 0;
   top: 0;
   fill: none;
-  stroke: #fff;
+  stroke: #f2d88f;
   stroke-dasharray: 150 480;
   stroke-dashoffset: 150;
   transition: 1s ease-in-out;
@@ -34,7 +34,7 @@ svg {
 
 .btn2:hover {
   transition: 1s ease-in-out;
-  background: #D4A830;
+  background: #7298c6;
 }
 
 .btn2:hover svg {
