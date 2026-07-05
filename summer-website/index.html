@@ -100,7 +100,10 @@
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 id="header-section-title" class="header-section-title d-md-none">暑訓簡介</h1>
+      <div class="header-logo-container">
+        <a href="#hero" class="logo"><img src="assets/img/hero-logo.png" alt="IZCC Logo" class="img-fluid"></a>
+      </div>
+      <h1 id="header-section-title" class="header-section-title d-md-none">首頁</h1>
 
 
 
@@ -358,7 +361,7 @@
               <div class="row g-3">
 
                 <!-- Left: Navigation Rail -->
-                <div class="col-sm-4">
+                <div class="col-md-4">
                   <div class="nav flex-column nav-pills course-rail" id="course-tab" role="tablist"
                     aria-orientation="vertical">
                     <button class="nav-link active" id="tab-web" data-bs-toggle="pill" data-bs-target="#content-web"
@@ -385,7 +388,7 @@
                 </div>
 
                 <!-- Right: Content Display -->
-                <div class="col-sm-8">
+                <div class="col-md-8">
                   <div class="tab-content course-tab-content" id="course-tabContent">
 
                     <!-- Content 1: Web Front-end -->
@@ -510,17 +513,19 @@
           <p>準備好加入我們了嗎？點擊下方按鈕前往報名！</p>
         </div>
         <div class="row justify-content-center text-center">
-          <div class="col-lg-8">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKSj-8RF4dyPxwDAZ0iZT7H7RmnvgG5FVmzHT6WtdxiHcEmA/viewform"
-              target="_blank" class="btn-signup-link">
-              <button class="btn2">
-                <svg width="360px" height="80px" viewBox="0 0 366 80" class="border">
-                  <polyline points="360,1 360,78 2,78 2,2 360,2" class="bg-line" />
-                  <polyline points="360,1 360,78 2,78 2,2 360,2" class="hl-line" />
-                </svg>
-                <span>前往填寫報名表單</span>
-              </button>
-            </a>
+          <div class="col-lg-8 d-flex justify-content-center">
+            <div class="center-btn-wrapper">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKSj-8RF4dyPxwDAZ0iZT7H7RmnvgG5FVmzHT6WtdxiHcEmA/viewform"
+                target="_blank">
+                <button class="btn2">
+                  <svg width="360px" height="80px" viewBox="0 0 366 80" class="border">
+                    <polyline points="360,1 360,78 2,78 2,2 360,2" class="bg-line" />
+                    <polyline points="360,1 360,78 2,78 2,2 360,2" class="hl-line" />
+                  </svg>
+                  <span>前往填寫報名表單</span>
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -585,7 +590,7 @@
         'signup': '報名表單'
       };
 
-      let currentSectionId = 'about';
+      let currentSectionId = 'hero';
 
       const observerOptions = {
         root: null,
