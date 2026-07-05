@@ -5,14 +5,14 @@
 
 import React from 'react';
 
-import inforLogo from '@/assets/.aistudio/建資社徽.png';
-import zsiscLogo from '@/assets/.aistudio/楓資社徽.jpg';
-import ckcscLogo from '@/assets/.aistudio/成電社徽.jpg';
-import cgiscLogo from '@/assets/.aistudio/景資社徽.jpg';
-import heroLogo from '@/assets/.aistudio/hero-logo.png';
+import inforLogo from '@/assets/infor.png';
+import zsiscLogo from '@/assets/zsisc.png';
+import ckcscLogo from '@/assets/ckcsc.png';
+import cmiocLogo from '@/assets/cmioc.png';
+import heroLogo from '@/assets/hero-logo.png';
 
 // Exported for preloading in IntroLoader
-export const ANIMATION_IMAGES = [inforLogo, zsiscLogo, ckcscLogo, cgiscLogo, heroLogo];
+export const ANIMATION_IMAGES = [inforLogo, zsiscLogo, ckcscLogo, cmiocLogo, heroLogo];
 
 // Common style wrapper for SVGs to handle unified brand neon glow effects
 export const SVGGlowFilters: React.FC = () => (
@@ -39,27 +39,27 @@ interface BadgeProps {
 // 1. INFOR Emblem (星光黃 Hexagon)
 export const INFORBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, className = '', onClick }) => {
   return (
-    <div 
+    <div
       className={`relative inline-flex items-center justify-center cursor-pointer select-none ${className} ${animate ? 'transition-all duration-300 hover:scale-105 active:scale-95' : ''}`}
       style={{ width: size, height: size }}
       onClick={onClick}
     >
-      <svg 
-        viewBox="0 0 100 100" 
+      <svg
+        viewBox="0 0 100 100"
         className="absolute inset-0 w-full h-full"
       >
         {/* Hexagonal Tech Background Grid */}
-        <polygon 
-          points="50,5 90,28 90,72 50,95 10,72 10,28" 
-          fill="rgba(42, 31, 0, 0.9)" 
-          stroke="#3A2A00" 
+        <polygon
+          points="50,5 90,28 90,72 50,95 10,72 10,28"
+          fill="rgba(42, 31, 0, 0.9)"
+          stroke="#3A2A00"
           strokeWidth="3.5"
         />
-        <polygon 
-          points="50,9 86,30 86,70 50,91 14,70 14,30" 
-          fill="none" 
-          stroke="#F5C542" 
-          strokeWidth="1.5" 
+        <polygon
+          points="50,9 86,30 86,70 50,91 14,70 14,30"
+          fill="none"
+          stroke="#F5C542"
+          strokeWidth="1.5"
           className="opacity-40"
         />
 
@@ -73,10 +73,10 @@ export const INFORBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, c
 
       {/* Central Actual Image */}
       <div className="absolute w-[52%] h-[52%] rounded-full overflow-hidden flex items-center justify-center bg-yellow-950/40 p-0.5">
-        <img 
-          src={inforLogo} 
-          alt="INFOR Logo" 
-          className="w-full h-full object-contain rounded-full" 
+        <img
+          src={inforLogo}
+          alt="INFOR Logo"
+          className="w-full h-full object-contain rounded-full"
           referrerPolicy="no-referrer"
         />
       </div>
@@ -87,13 +87,13 @@ export const INFORBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, c
 // 2. ZSISC Emblem (星光黃 Circle)
 export const ZSISCBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, className = '', onClick }) => {
   return (
-    <div 
+    <div
       className={`relative inline-flex items-center justify-center cursor-pointer select-none ${className} ${animate ? 'transition-all duration-300 hover:scale-105 active:scale-95' : ''}`}
       style={{ width: size, height: size }}
       onClick={onClick}
     >
-      <svg 
-        viewBox="0 0 100 100" 
+      <svg
+        viewBox="0 0 100 100"
         className="absolute inset-0 w-full h-full"
       >
         <circle cx="50" cy="50" r="45" fill="rgba(42, 31, 0, 0.9)" stroke="#3A2A00" strokeWidth="3.5" />
@@ -101,10 +101,10 @@ export const ZSISCBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, c
       </svg>
 
       <div className="absolute w-[60%] h-[60%] rounded-full overflow-hidden flex items-center justify-center bg-yellow-950/40 p-0.5">
-        <img 
-          src={zsiscLogo} 
-          alt="ZSISC Logo" 
-          className="w-full h-full object-contain rounded-full" 
+        <img
+          src={zsiscLogo}
+          alt="ZSISC Logo"
+          className="w-full h-full object-contain rounded-full"
           referrerPolicy="no-referrer"
         />
       </div>
@@ -115,26 +115,26 @@ export const ZSISCBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, c
 // 3. CKCSC Emblem (星光黃 Shield)
 export const CKCSCBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, className = '', onClick }) => {
   return (
-    <div 
+    <div
       className={`relative inline-flex items-center justify-center cursor-pointer select-none ${className} ${animate ? 'transition-all duration-300 hover:scale-105 active:scale-95' : ''}`}
       style={{ width: size, height: size }}
       onClick={onClick}
     >
-      <svg 
-        viewBox="0 0 100 100" 
+      <svg
+        viewBox="0 0 100 100"
         className="absolute inset-0 w-full h-full"
       >
-        <path 
-          d="M 50 6 L 88 18 L 88 56 C 88 78, 70 91, 50 95 C 30 91, 12 78, 12 56 L 12 18 Z" 
-          fill="rgba(42, 31, 0, 0.9)" 
-          stroke="#3A2A00" 
-          strokeWidth="3.5" 
+        <path
+          d="M 50 6 L 88 18 L 88 56 C 88 78, 70 91, 50 95 C 30 91, 12 78, 12 56 L 12 18 Z"
+          fill="rgba(42, 31, 0, 0.9)"
+          stroke="#3A2A00"
+          strokeWidth="3.5"
         />
-        <path 
-          d="M 50 11 L 83 21 L 83 54 C 83 73, 67 85, 50 89 C 33 85, 17 73, 17 54 L 17 21 Z" 
-          fill="none" 
-          stroke="#F5C542" 
-          strokeWidth="1.5" 
+        <path
+          d="M 50 11 L 83 21 L 83 54 C 83 73, 67 85, 50 89 C 33 85, 17 73, 17 54 L 17 21 Z"
+          fill="none"
+          stroke="#F5C542"
+          strokeWidth="1.5"
           strokeDasharray="4,2"
           className="opacity-40"
         />
@@ -144,10 +144,10 @@ export const CKCSCBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, c
       </svg>
 
       <div className="absolute w-[52%] h-[52%] rounded-full overflow-hidden flex items-center justify-center bg-yellow-950/40 p-0.5">
-        <img 
-          src={ckcscLogo} 
-          alt="CKCSC Logo" 
-          className="w-full h-full object-contain rounded-full" 
+        <img
+          src={ckcscLogo}
+          alt="CKCSC Logo"
+          className="w-full h-full object-contain rounded-full"
           referrerPolicy="no-referrer"
         />
       </div>
@@ -155,16 +155,15 @@ export const CKCSCBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, c
   );
 };
 
-// 4. CGISC Emblem (星光黃 Cyber-Sun)
-export const CGISCBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, className = '', onClick }) => {
+export const CMIOCBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, className = '', onClick }) => {
   return (
-    <div 
+    <div
       className={`relative inline-flex items-center justify-center cursor-pointer select-none ${className} ${animate ? 'transition-all duration-300 hover:scale-105 active:scale-95' : ''}`}
       style={{ width: size, height: size }}
       onClick={onClick}
     >
-      <svg 
-        viewBox="0 0 100 100" 
+      <svg
+        viewBox="0 0 100 100"
         className="absolute inset-0 w-full h-full"
       >
         <circle cx="50" cy="50" r="43" fill="rgba(42, 31, 0, 0.9)" stroke="#3A2A00" strokeWidth="3.5" />
@@ -175,10 +174,10 @@ export const CGISCBadge: React.FC<BadgeProps> = ({ size = 120, animate = true, c
       </svg>
 
       <div className="absolute w-[58%] h-[58%] rounded-full overflow-hidden flex items-center justify-center bg-yellow-950/40 p-0.5">
-        <img 
-          src={cgiscLogo} 
-          alt="CGISC Logo" 
-          className="w-full h-full object-contain rounded-full" 
+        <img
+          src={cmiocLogo}
+          alt="CMIOC Logo"
+          className="w-full h-full object-contain rounded-full"
           referrerPolicy="no-referrer"
         />
       </div>
@@ -191,10 +190,10 @@ export const IZCCLogo: React.FC<{ glow?: boolean; className?: string }> = ({ glo
   return (
     <div className={`relative flex flex-col items-center justify-center w-full select-none ${className}`}>
       <div className="relative w-full aspect-[350/120] max-h-[160px] flex items-center justify-center rounded-2xl overflow-hidden bg-yellow-950/20 p-1">
-        <img 
-          src={heroLogo} 
-          alt="IZCC Hero Logo" 
-          className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(245,197,66,0.5)]" 
+        <img
+          src={heroLogo}
+          alt="IZCC Hero Logo"
+          className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(245,197,66,0.5)]"
           referrerPolicy="no-referrer"
         />
       </div>
