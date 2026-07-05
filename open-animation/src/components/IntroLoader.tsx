@@ -58,11 +58,11 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
 
       {/* Subtle decorative rings */}
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-        <div className="absolute w-[200px] h-[200px] rounded-full border border-yellow-900/20" />
-        <div className="absolute w-[400px] h-[400px] rounded-full border border-dashed border-yellow-900/15 animate-[spin_60s_linear_infinite]" />
-        <div className="absolute w-[600px] h-[600px] rounded-full border border-yellow-900/10" />
-        <div className="absolute h-full w-[1px] bg-yellow-900/40" />
-        <div className="absolute w-full h-[1px] bg-yellow-900/40" />
+        <div className="absolute w-[200px] h-[200px] rounded-full border border-blue-700/20" />
+        <div className="absolute w-[400px] h-[400px] rounded-full border border-dashed border-blue-700/15 animate-[spin_60s_linear_infinite]" />
+        <div className="absolute w-[600px] h-[600px] rounded-full border border-blue-700/10" />
+        <div className="absolute h-full w-[1px] bg-blue-700/40" />
+        <div className="absolute w-full h-[1px] bg-blue-700/40" />
       </div>
 
       {/* MAIN ANIMATION CANVAS */}
@@ -144,13 +144,13 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
                 exit={{ opacity: 0 }}
                 className="absolute flex items-center justify-center w-full h-full pointer-events-none"
               >
-                <div className="absolute w-64 h-64 border-2 border-yellow-500/20 border-dashed rounded-full animate-[spin_5s_linear_infinite]" />
-                <div className="absolute w-44 h-44 border border-yellow-400/40 border-dashed rounded-full animate-[spin_2s_linear_infinite_reverse]" />
-                <div className="absolute w-20 h-20 bg-yellow-600/10 blur-xl rounded-full scale-150 animate-pulse" />
+                <div className="absolute w-64 h-64 border-2 border-blue-400/20 border-dashed rounded-full animate-[spin_5s_linear_infinite]" />
+                <div className="absolute w-44 h-44 border border-blue-300/40 border-dashed rounded-full animate-[spin_2s_linear_infinite_reverse]" />
+                <div className="absolute w-20 h-20 bg-blue-600/10 blur-xl rounded-full scale-150 animate-pulse" />
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ repeat: Infinity, duration: 2, ease: 'linear' }}
-                  className="absolute text-yellow-400 opacity-60"
+                  className="absolute text-blue-400 opacity-60"
                 >
                   <Sparkles className="w-8 h-8 animate-pulse" />
                 </motion.div>
@@ -171,10 +171,10 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
                   initial={{ scale: 0.5, opacity: 0.9 }}
                   animate={{ scale: 1.6, opacity: 0 }}
                   transition={{ duration: 1.1, ease: 'easeOut' }}
-                  className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full blur-3xl opacity-35 pointer-events-none"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-3xl opacity-35 pointer-events-none"
                 />
 
-                <div className="p-6 bg-yellow-950/80 border border-yellow-900/40 rounded-3xl backdrop-blur-md shadow-[0_0_80px_rgba(245,197,66,0.2)]">
+                <div className="p-6 bg-blue-950/80 border border-blue-800/40 rounded-3xl backdrop-blur-md shadow-[0_0_80px_rgba(114,152,198,0.2)]">
                   <IZCCLogo glow={true} />
                 </div>
 
@@ -182,9 +182,9 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-1.5 text-[11px] font-sans text-yellow-400 font-extrabold uppercase bg-yellow-950/30 px-3 py-1 rounded-full border border-yellow-500/30 shadow-lg tracking-wide whitespace-nowrap"
+                  className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-1.5 text-[11px] font-sans text-blue-300 font-extrabold uppercase bg-blue-950/30 px-3 py-1 rounded-full border border-blue-400/30 shadow-lg tracking-wide whitespace-nowrap"
                 >
-                  <Sparkle className="w-3.5 h-3.5 animate-pulse text-yellow-300" />
+                  <Sparkle className="w-3.5 h-3.5 animate-pulse text-blue-200" />
                   <span>IZCC SYNCHRONIZATION ALIGNED</span>
                 </motion.div>
               </motion.div>
@@ -199,11 +199,11 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
             className="flex flex-col items-center gap-6"
           >
             {/* Spinning ring */}
-            <div className="w-12 h-12 border-2 border-yellow-500/30 border-t-yellow-400 rounded-full animate-spin" />
+            <div className="w-12 h-12 border-2 border-blue-500/30 border-t-blue-400 rounded-full animate-spin" />
             <motion.p
               animate={{ opacity: [0.3, 1, 0.3] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-              className="text-[11px] uppercase tracking-[0.3em] text-yellow-500/60 font-mono"
+              className="text-[11px] uppercase tracking-[0.3em] text-blue-400/60 font-mono"
             >
               Loading
             </motion.p>
