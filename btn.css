@@ -1,61 +1,52 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
-
 .btn2 {
   position: relative;
   width: 360px;
   height: 80px;
   cursor: pointer;
-  background-color: #121b3c;
-  border: 1px solid #7298c6;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
   outline: none;
-  transition: 1s ease-in-out;
-}
-
-.center {
-  margin-top: 1vh;
-  position: relative;
-  width: 360px;
-  height: 80px;
-}
-
-.center2 {
-  margin-top: 2vh;
-  position: relative;
-  width: 360px;
-  height: 80px;
-}
-
-svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  fill: none;
-  stroke: #f2d88f;
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 150;
-  transition: 1s ease-in-out;
+  transition: transform 0.2s ease, filter 0.3s ease, border-color 0.3s ease;
 }
 
 .btn2:hover {
-  transition: 1s ease-in-out;
-  background: #7298c6;
+  filter: brightness(1.2);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: scale(1.03);
 }
 
-.btn2:hover svg {
-  stroke-dashoffset: -480;
+.btn2:active {
+  transform: scale(0.97);
 }
 
 .btn2 span {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 34px;
   font-weight: 1000;
 }
 
+.center {
+  margin-top: 1vh;
+  display: flex;
+  justify-content: center;
+}
+
+.center2 {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+}
+
 .center-btn-wrapper {
-  position: relative;
-  width: 360px;
-  height: 80px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+}
+
+.btn2 svg {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -71,14 +62,12 @@ svg {
 
   .btn2 span {
     font-size: 30px;
-    /* Enlarge text to fit the button shell nicely */
   }
 }
 
 @media (max-width: 480px) {
   .btn2 span {
     font-size: 26px;
-    /* Slightly smaller but still readable on very narrow screens */
   }
 }
 
@@ -91,9 +80,7 @@ svg {
   }
 }
 
-
 .bg-blur {
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
-  /* Safari compatibility */
 }
