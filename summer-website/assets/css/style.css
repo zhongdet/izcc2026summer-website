@@ -1632,7 +1632,7 @@ section {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 80px 0;
+  padding: 30px 0;
 }
 
 #footer .footer-top .footer-logo img {
@@ -1726,8 +1726,8 @@ section {
   border-top: 1px solid #222222;
   z-index: 2;
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #footer .copyright {
@@ -2313,6 +2313,15 @@ img {
     max-height: 35px;
     width: auto;
   }
+  /* Schedule image border radius on mobile */
+  .schedule-img {
+    border-radius: 10px !important;
+  }
+}
+
+/* Schedule image border radius on desktop */
+.schedule-img {
+  border-radius: 16px !important;
 }
 
 @media (min-width: 769px) {
