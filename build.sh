@@ -2,9 +2,8 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
-SITE_DIR="$ROOT_DIR/summer-website"
 ANIMATION_DIR="$ROOT_DIR/open-animation"
-TARGET_DIR="$SITE_DIR/open-animation"
+TARGET_DIR="$ROOT_DIR/animation"
 
 echo "🔨 Building animation..."
 cd "$ANIMATION_DIR"
@@ -19,4 +18,4 @@ echo ""
 echo "✅ Done! Files deployed:"
 ls -la "$TARGET_DIR"
 echo ""
-echo "📍 Open $SITE_DIR/index.html in your browser to test."
+echo "📍 Open $ROOT_DIR/index.html in your browser to test."

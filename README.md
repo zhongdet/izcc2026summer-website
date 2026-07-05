@@ -5,7 +5,10 @@
 這個專案有兩個**各自獨立開發**的部份，透過 iframe 嵌入整合：
 
 ```
-summer-website/
+.
+├── index.html                        # 🌐 主網站（純靜態 HTML + CSS + JS，內含開頭動畫的 iframe overlay）
+├── assets/                           #   圖片、CSS、JS、vendor 套件
+├── btn.css
 ├── build.sh                          # 一鍵 Build + 部署
 ├── open-animation/                   # 🎬 開頭動畫（React 19 + Vite，獨立專案）
 │   ├── src/                          #   動畫原始碼（React + framer-motion）
@@ -13,13 +16,7 @@ summer-website/
 │   ├── dist/                         #   Build 產出
 │   ├── package.json                  #   pnpm build / pnpm deploy
 │   └── vite.config.ts
-├── summer-website/                   # 🌐 主網站（純靜態 HTML + CSS + JS）
-│   ├── index.html                    #   主頁（內含開頭動畫的 iframe overlay）
-│   ├── assets/                       #   圖片、CSS、JS、vendor 套件
-│   ├── btn.css
-│   └── open-animation/               #   Build 後的動畫被複製到這裡
-│       ├── index.html
-│       └── assets/
+└── animation/                        # Build 後的動畫被複製到這裡（執行 build.sh 後產生）
 ```
 
 ## 分開開發的原因
@@ -30,7 +27,7 @@ summer-website/
 
 ```html
 <div id="intro-overlay">
-  <iframe src="open-animation/index.html" ...></iframe>
+  <iframe src="animation/" ...></iframe>
 </div>
 ```
 
@@ -99,14 +96,14 @@ pnpm dev          # 啟動 dev server（localhost:3000）
 # 方式二：從動畫目錄
 cd open-animation
 pnpm build        # 只 build（產出在 dist/）
-pnpm deploy       # build + 自動複製到 summer-website/open-animation/
+pnpm deploy       # build + 自動複製到 ../animation/
 ```
 
-執行後動畫的 build 產物會自動部署到 `summer-website/open-animation/`，開啟 `summer-website/index.html` 即可看到完整效果。
+執行後動畫的 build 產物會自動部署到 `animation/`，開啟 `index.html` 即可看到完整效果。
 
 ## 在瀏覽器直接開啟（file:// protocol）
 
-這個網站是純靜態網站，可以在瀏覽器直接開啓 `summer-website/index.html` 預覽，**不需要 HTTP server**。
+這個網站是純靜態網站，可以在瀏覽器直接開啓 `index.html` 預覽，**不需要 HTTP server**。
 
 但 `file://` 與 ES Module 不相容，因此 Build 時會自動：
 
@@ -124,7 +121,6 @@ pnpm deploy       # build + 自動複製到 summer-website/open-animation/
 
 ```bash
 # Python 內建 server
-cd summer-website
 python3 -m http.server 8080
 # 開啟 http://localhost:8080
 ```

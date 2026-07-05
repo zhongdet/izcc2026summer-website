@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
 .btn2 {
   position: relative;
   width: 360px;
@@ -9,18 +10,21 @@
   outline: none;
   transition: 1s ease-in-out;
 }
+
 .center {
   margin-top: 1vh;
   position: relative;
   width: 360px;
   height: 80px;
 }
+
 .center2 {
   margin-top: 2vh;
   position: relative;
   width: 360px;
   height: 80px;
 }
+
 svg {
   position: absolute;
   left: 0;
@@ -55,27 +59,41 @@ svg {
 }
 
 @media (max-width: 768px) {
-  .center, .center2, .center-btn-wrapper {
+
+  .center,
+  .center2,
+  .center-btn-wrapper {
     transform: scale(0.8);
     transform-origin: center;
     margin-top: -5px;
     margin-bottom: -5px;
   }
+
   .btn2 span {
-    font-size: 30px; /* Enlarge text to fit the button shell nicely */
+    font-size: 30px;
+    /* Enlarge text to fit the button shell nicely */
   }
 }
 
 @media (max-width: 480px) {
   .btn2 span {
-    font-size: 26px; /* Slightly smaller but still readable on very narrow screens */
+    font-size: 26px;
+    /* Slightly smaller but still readable on very narrow screens */
   }
 }
 
 @media (max-width: 360px) {
-  .center, .center2, .center-btn-wrapper {
+
+  .center,
+  .center2,
+  .center-btn-wrapper {
     transform: scale(0.7);
   }
 }
 
 
+.bg-blur {
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  /* Safari compatibility */
+}
