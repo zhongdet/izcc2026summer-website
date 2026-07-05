@@ -1785,7 +1785,7 @@ img {
 
 .club-window-card {
   background: transparent;
-  height: 220px; /* Smaller Card Height */
+  height: 240px; /* Enlarged Card Height */
   perspective: 1000px; /* Enable 3D transitions */
   cursor: pointer;
 }
@@ -1866,8 +1866,8 @@ img {
 }
 
 .club-badge-wrapper {
-  width: 70px; /* Smaller Badge size */
-  height: 70px;
+  width: 90px; /* Enlarged Badge size */
+  height: 90px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid rgba(245, 197, 66, 0.3);
@@ -2188,11 +2188,11 @@ img {
   
   /* Club Grid Card on Mobile */
   .club-window-card {
-    height: 190px;
+    height: 210px;
   }
   .club-badge-wrapper {
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
   }
   
   /* Navigation Rail on Mobile */
