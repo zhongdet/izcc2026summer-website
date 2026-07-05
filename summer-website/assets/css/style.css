@@ -8,11 +8,11 @@ body {
 }
 a {
   text-decoration: none;
-  color: #F5C542;
+  color: #7298c6;
 }
 
 a:hover {
-  color: #F8D776;
+  color: #f2d88f;
   text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #F5C542;
+  background: #7298c6;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -48,13 +48,13 @@ h6 {
 
 .back-to-top i {
   font-size: 28px;
-  color: #2e2e2e;
+  color: #121b3c;
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: #F8D776;
-  color: #2e2e2e;
+  background: #f2d88f;
+  color: #121b3c;
 }
 
 .back-to-top.active {
@@ -167,7 +167,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .navbar .dropdown ul {
@@ -203,7 +203,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .navbar .dropdown:hover>ul {
@@ -302,7 +302,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .navbar-mobile .getstarted,
@@ -337,7 +337,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -431,15 +431,15 @@ h6 {
   padding: 14px 30px;
   border-radius: 3px;
   margin: 10px;
-  color: #2e2e2e;
-  background: #F5C542;
+  color: #121b3c;
+  background: #7298c6;
   filter: drop-shadow(0 0 1.5rem rgb(0, 0, 0));
 }
 
 #hero .btn-get-started:hover {
   transition: 0.5s;
-  background: #2e2e2e;
-  color: #F5C542;
+  background: #121b3c;
+  color: #7298c6;
 }
 
 @media (min-width: 1024px) {
@@ -517,7 +517,7 @@ section {
 .about .content ul i {
   font-size: 24px;
   padding: 2px 6px 0 0;
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .about .content p:last-child {
@@ -536,7 +536,7 @@ section {
 .activity .icon-box i {
   font-size: 48px;
   float: left;
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .activity .icon-box p {
@@ -578,7 +578,7 @@ section {
 }
 
 .featured .nav-link:hover h4 {
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .featured .nav-link p {
@@ -591,7 +591,7 @@ section {
 }
 
 .featured .nav-link.active h4 {
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .featured .tab-pane.active {
@@ -676,7 +676,7 @@ section {
 }
 
 .course .accordion-list span {
-  color: #F5C542;
+  color: #7298c6;
   font-weight: 600;
   font-size: 18px;
   padding-right: 10px;
@@ -703,7 +703,7 @@ section {
 }
 
 .course .accordion-list a.collapsed:hover {
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .course .accordion-list a.collapsed .icon-show {
@@ -717,7 +717,7 @@ section {
 .course .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#F5C542 50%, rgba(245, 197, 66, 0.4) 52%);
+  background: radial-gradient(#7298c6 50%, rgba(114, 152, 198, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -736,7 +736,7 @@ section {
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 15px solid #2e2e2e;
+  border-left: 15px solid #121b3c;
   z-index: 100;
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
@@ -753,14 +753,14 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(245, 197, 66, 0.7);
+  border: 5px solid rgba(114, 152, 198, 0.7);
   top: -15%;
   left: -15%;
-  background: rgba(198, 16, 0, 0);
+  background: rgba(18, 27, 60, 0);
 }
 
 .course .play-btn:hover::after {
-  border-left: 15px solid #F5C542;
+  border-left: 15px solid #7298c6;
   transform: scale(20);
 }
 
@@ -843,8 +843,8 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  background: #F5C542;
-  color: #2e2e2e;
+  background: #7298c6;
+  color: #121b3c;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -944,7 +944,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -988,13 +988,13 @@ section {
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #2e2e2e;
+  background-color: #121b3c;
   opacity: 1;
-  border: 1px solid #F5C542;
+  border: 1px solid #7298c6;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #F5C542;
+  background-color: #7298c6;
 }
 
 .portfolio-details .portfolio-info {
@@ -1061,11 +1061,11 @@ section {
 }
 
 .testimonials .quote-icon i {
-  color: #F5C542;
+  color: #7298c6;
   font-size: 24px;
   padding: 18px;
   border-radius: 50px;
-  border: 2px solid #F5C542;
+  border: 2px solid #7298c6;
 }
 
 .testimonials .testimonials-carousel,
@@ -1117,7 +1117,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #F5C542;
+  background-color: #7298c6;
 }
 
 @media (min-width: 992px) {
@@ -1187,7 +1187,7 @@ section {
   height: 40px;
   opacity: 0;
   transition: bottom ease-in-out 0.4s;
-  background: rgba(245, 197, 66, 0.8);
+  background: rgba(114, 152, 198, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1227,7 +1227,7 @@ section {
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 15px;
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .club .member .member-info p {
@@ -1299,7 +1299,7 @@ section {
 }
 
 .pricing .box ul i {
-  color: #F5C542;
+  color: #7298c6;
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1318,8 +1318,8 @@ section {
   display: inline-block;
   padding: 10px 40px 12px 40px;
   border-radius: 5px;
-  border: 2px solid #F5C542;
-  color: #F5C542;
+  border: 2px solid #7298c6;
+  color: #7298c6;
   font-size: 14px;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
@@ -1328,22 +1328,22 @@ section {
 }
 
 .pricing .box .btn-buy:hover {
-  background: #F5C542;
-  color: #2e2e2e;
+  background: #7298c6;
+  color: #121b3c;
 }
 
 .pricing .recommended {
-  border-color: #F5C542;
+  border-color: #7298c6;
 }
 
 .pricing .recommended .btn-buy {
-  background: #F5C542;
-  color: #2e2e2e;
+  background: #7298c6;
+  color: #121b3c;
 }
 
 .pricing .recommended .btn-buy:hover {
-  background: #D4A830;
-  border-color: #D4A830;
+  background: #f2d88f;
+  border-color: #f2d88f;
 }
 
 .pricing .recommended-badge {
@@ -1354,8 +1354,8 @@ section {
   z-index: 1;
   font-size: 12px;
   padding: 4px 25px 6px 25px;
-  background: #FFF8E1;
-  color: #F5C542;
+  background: #f2d88f;
+  color: #121b3c;
   border-radius: 50px;
   text-transform: uppercase;
   font-weight: 600;
@@ -1378,7 +1378,7 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: #F5C542;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -1407,7 +1407,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #F5C542;
+  color: #7298c6;
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -1431,11 +1431,11 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #F5C542;
+  color: #7298c6;
   float: left;
   width: 44px;
   height: 44px;
-  background: #FFF8E1;
+  background: #f2d88f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1466,8 +1466,8 @@ section {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #F5C542;
-  color: #2e2e2e;
+  background: #7298c6;
+  color: #121b3c;
 }
 
 .contact .php-email-form {
@@ -1538,16 +1538,16 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #F5C542;
+  background: #7298c6;
   border: 0;
   padding: 10px 24px;
-  color: #2e2e2e;
+  color: #121b3c;
   transition: 0.4s;
   border-radius: 4px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #D4A830;
+  background: #f2d88f;
 }
 
 @keyframes animate-loading {
@@ -1686,15 +1686,15 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #F5C542;
-  color: #2e2e2e;
+  background: #7298c6;
+  color: #121b3c;
   transition: 0.3s;
   border-radius: 50px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: #D4A830;
+  background: #f2d88f;
 }
 
 #footer .footer-top .social-links {
@@ -1704,8 +1704,8 @@ section {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #F5C542;
-  color: #2e2e2e;
+  background: #7298c6;
+  color: #121b3c;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1717,8 +1717,8 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #D4A830;
-  color: #2e2e2e;
+  background: #f2d88f;
+  color: #121b3c;
   text-decoration: none;
 }
 
@@ -1860,8 +1860,8 @@ img {
   left: 10px;
   width: 12px;
   height: 12px;
-  border-top: 2px solid rgba(245, 197, 66, 0.6);
-  border-left: 2px solid rgba(245, 197, 66, 0.6);
+  border-top: 2px solid rgba(114, 152, 198, 0.6);
+  border-left: 2px solid rgba(114, 152, 198, 0.6);
 }
 .club-window-front::after {
   content: '';
@@ -1870,22 +1870,22 @@ img {
   right: 10px;
   width: 12px;
   height: 12px;
-  border-bottom: 2px solid rgba(245, 197, 66, 0.6);
-  border-right: 2px solid rgba(245, 197, 66, 0.6);
+  border-bottom: 2px solid rgba(114, 152, 198, 0.6);
+  border-right: 2px solid rgba(114, 152, 198, 0.6);
 }
 
 .club-window-back {
-  background: linear-gradient(135deg, #2d2d2d 0%, #171717 100%);
-  border: 1px solid rgba(245, 197, 66, 0.3); /* Smaller border */
+  background: linear-gradient(135deg, #1a2545 0%, #121b3c 100%);
+  border: 1px solid rgba(114, 152, 198, 0.3);
   transform: rotateY(180deg);
 }
 
 .club-badge-wrapper {
-  width: 90px; /* Enlarged Badge size */
+  width: 90px;
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid rgba(245, 197, 66, 0.3);
+  border: 2px solid rgba(114, 152, 198, 0.3);
   margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
@@ -1903,7 +1903,7 @@ img {
 .club-name {
   font-size: 22px;
   font-weight: 700;
-  color: #F5C542;
+  color: #7298c6;
   margin: 5px 0 2px 0;
   letter-spacing: 0.5px;
 }
@@ -1916,7 +1916,7 @@ img {
 .club-back-title {
   font-size: 18px;
   font-weight: 700;
-  color: #F5C542;
+  color: #7298c6;
   margin-bottom: 8px;
 }
 
@@ -1931,17 +1931,17 @@ img {
 
 .club-link {
   font-size: 11px;
-  color: #F5C542;
+  color: #7298c6;
   font-weight: 600;
-  border: 1px solid #F5C542;
+  border: 1px solid #7298c6;
   padding: 3px 12px;
   border-radius: 20px;
   transition: all 0.3s;
 }
 
 .club-link:hover {
-  background: #F5C542;
-  color: #2e2e2e !important;
+  background: #7298c6;
+  color: #121b3c !important;
 }
 
 /* --- 活動介紹 Section --- */
@@ -1976,13 +1976,13 @@ img {
 }
 
 .day-badge {
-  background: #F5C542;
-  color: #2e2e2e;
+  background: #7298c6;
+  color: #121b3c;
   font-weight: 700;
   font-size: 13px;
   padding: 5px 12px;
-  border-radius: 4px; /* Reduced roundness */
-  align-self: center; /* Vertically center badge */
+  border-radius: 4px;
+  align-self: center;
   min-width: 60px;
   text-align: center;
 }
@@ -2012,12 +2012,12 @@ img {
   border-collapse: collapse;
 }
 .timetable-table th {
-  background: #1e1e1e;
-  color: #F5C542;
+  background: #121b3c;
+  color: #7298c6;
   font-weight: 700;
-  border-bottom: 2px solid #F5C542 !important;
+  border-bottom: 2px solid #7298c6 !important;
   padding: 15px 12px;
-  font-size: 20px; /* Enlarged */
+  font-size: 20px;
 }
 .timetable-table td {
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
@@ -2030,10 +2030,10 @@ img {
   background: rgba(255, 255, 255, 0.02) !important;
 }
 .time-col {
-  background: #1a1a1a !important;
-  color: #F5C542 !important;
+  background: #121b3c !important;
+  color: #7298c6 !important;
   font-weight: 700;
-  font-size: 16px; /* Enlarged */
+  font-size: 16px;
 }
 .loc-text {
   font-size: 14px; /* Enlarged */
@@ -2125,9 +2125,9 @@ img {
 }
 
 .course-rail .nav-link.active {
-  background: #F5C542 !important;
-  color: #2e2e2e !important;
-  border-color: #F5C542;
+  background: #7298c6 !important;
+  color: #121b3c !important;
+  border-color: #7298c6;
 }
 
 .course-rail .nav-link.active .rail-num {
@@ -2142,7 +2142,7 @@ img {
 .course-tab-content h3 {
   font-size: 22px;
   font-weight: 700;
-  color: #F5C542;
+  color: #7298c6;
   margin-bottom: 15px;
 }
 
@@ -2171,7 +2171,7 @@ img {
 }
 
 .course-topics li i {
-  color: #F5C542;
+  color: #7298c6;
   font-size: 16px;
 }
 
@@ -2271,9 +2271,9 @@ img {
     transition: all 0.2s ease;
   }
   .course-rail .nav-link.active {
-    color: #F5C542 !important;
+    color: #7298c6 !important;
     background: transparent !important;
-    border-bottom-color: #F5C542;
+    border-bottom-color: #7298c6;
     box-shadow: none !important;
   }
   /* Hide icons on mobile course tabs */
@@ -2337,7 +2337,7 @@ img {
 .header-section-title {
   font-size: 20px;
   font-weight: 700;
-  color: #F5C542;
+  color: #7298c6;
   margin: 0;
   transition: opacity 0.2s ease;
   opacity: 1;
