@@ -62,13 +62,13 @@ svg {
     margin-bottom: -5px;
   }
   .btn2 span {
-    font-size: 24px; /* Shrink long button text on tablet/mobile */
+    font-size: 30px; /* Enlarge text to fit the button shell nicely */
   }
 }
 
 @media (max-width: 480px) {
   .btn2 span {
-    font-size: 20px; /* Shrink further for very narrow screens */
+    font-size: 26px; /* Slightly smaller but still readable on very narrow screens */
   }
 }
 

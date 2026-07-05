@@ -350,7 +350,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg");
+  background: url("../img/hero-bg.jpg") no-repeat center -100px;
   background-size: cover;
   position: relative;
 }
@@ -388,8 +388,8 @@ h6 {
   #hero .hero-logo img {
     margin-bottom: 18vh; /* Push buttons down further */
     margin-top: -15vh; /* Shift logo upwards */
-    width: 80vw;
-    max-width: 280px;
+    width: 90vw;
+    max-width: 320px;
   }
 }
 
