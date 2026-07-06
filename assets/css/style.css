@@ -251,9 +251,75 @@ h6 {
   color: #2e2e2e;
 }
 
+/* Nav Scroll Wrapper */
+.nav-scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: none !important;
+  }
+
+  /* Make navbar a horizontal scroll rail */
+  #navbar {
+    display: block !important;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    max-width: 60vw;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    position: relative;
+    /* Add gradient mask */
+    mask-image: linear-gradient(to right, transparent, white 20px, white calc(100% - 20px), transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, white 20px, white calc(100% - 20px), transparent);
+  }
+  
+  #navbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .navbar ul {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .navbar li {
+    display: inline-block;
+  }
+
+  .navbar a {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+  }
+
+  /* Add scroll arrows to the wrapper */
+  .nav-scroll-wrapper::before,
+  .nav-scroll-wrapper::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 11px;
+  }
+  .nav-scroll-wrapper::before {
+    content: "\f053"; /* fa-chevron-left */
+    left: 2px;
+  }
+  .nav-scroll-wrapper::after {
+    content: "\f054"; /* fa-chevron-right */
+    right: 2px;
   }
 }
 
@@ -2315,20 +2381,6 @@ img {
   .course-rail-container {
     height: auto !important;
   }
-  /* Hide standard header elements on mobile */
-  #navbar, .mobile-nav-toggle {
-    display: none !important;
-  }
-  #header-section-title {
-    display: block !important;
-    font-size: 18px;
-    margin-left: auto;
-    padding-left: 15px;
-  }
-  .header-logo-container {
-    display: flex;
-    align-items: center;
-  }
   .header-logo-container .logo img {
     max-height: 35px;
     width: auto;
@@ -2342,29 +2394,6 @@ img {
 /* Schedule image border radius on desktop */
 .schedule-img {
   border-radius: 16px !important;
-}
-
-@media (min-width: 769px) {
-  #header-section-title {
-    display: none !important;
-  }
-  .header-logo-container {
-    display: none !important;
-  }
-}
-
-/* Mobile Header Section Title */
-.header-section-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #7298c6;
-  margin: 0;
-  transition: opacity 0.2s ease;
-  opacity: 1;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-.header-section-title.fade-out {
-  opacity: 0;
 }
 
 /* Course Rail Icons */
