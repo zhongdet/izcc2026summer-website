@@ -148,6 +148,23 @@
   }
 
   /**
+   * Horizontal scroll buttons for mobile navbar
+   */
+  on('click', '.nav-scroll-btn.left', function(e) {
+    let navbar = select('#navbar')
+    if (navbar) {
+      navbar.scrollBy({ left: -100, behavior: 'smooth' })
+    }
+  })
+
+  on('click', '.nav-scroll-btn.right', function(e) {
+    let navbar = select('#navbar')
+    if (navbar) {
+      navbar.scrollBy({ left: 100, behavior: 'smooth' })
+    }
+  })
+
+  /**
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {

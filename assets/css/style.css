@@ -259,6 +259,10 @@ h6 {
   margin-left: auto;
 }
 
+.nav-scroll-btn {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: none !important;
@@ -271,12 +275,12 @@ h6 {
     white-space: nowrap;
     scrollbar-width: none; /* Firefox */
     max-width: 60vw;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
     position: relative;
     /* Add gradient mask */
-    mask-image: linear-gradient(to right, transparent, white 20px, white calc(100% - 20px), transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, white 20px, white calc(100% - 20px), transparent);
+    mask-image: linear-gradient(to right, transparent, white 28px, white calc(100% - 28px), transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, white 28px, white calc(100% - 28px), transparent);
   }
   
   #navbar::-webkit-scrollbar {
@@ -300,25 +304,36 @@ h6 {
     font-size: 14px !important;
   }
 
-  /* Add scroll arrows to the wrapper */
-  .nav-scroll-wrapper::before,
-  .nav-scroll-wrapper::after {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+  /* Interactive Nav Scroll Buttons */
+  .nav-scroll-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10;
-    pointer-events: none;
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 11px;
+    z-index: 15;
+    background: rgba(18, 27, 60, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 0;
+    transition: background 0.2s ease, transform 0.2s ease;
   }
-  .nav-scroll-wrapper::before {
-    content: "\f053"; /* fa-chevron-left */
+  .nav-scroll-btn:hover {
+    background: rgba(18, 27, 60, 0.95);
+  }
+  .nav-scroll-btn:active {
+    transform: translateY(-50%) scale(0.9);
+  }
+  .nav-scroll-btn.left {
     left: 2px;
   }
-  .nav-scroll-wrapper::after {
-    content: "\f054"; /* fa-chevron-right */
+  .nav-scroll-btn.right {
     right: 2px;
   }
 }
