@@ -10,6 +10,9 @@
   border-radius: 40px;
   outline: none;
   transition: transform 0.2s ease, filter 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn2:hover {
@@ -20,6 +23,19 @@
 
 .btn2:active {
   transform: scale(0.97);
+}
+
+a:has(.btn2):focus-visible {
+  outline: none;
+}
+
+a:focus-visible .btn2 {
+  filter: brightness(1.2);
+  border-color: rgba(255, 255, 255, 0.455);
+  transform: scale(1.03);
+  outline: 2.5px solid #f2d88f;
+  outline-offset: 6px;
+  border-radius: 40px;
 }
 
 .btn2 span {

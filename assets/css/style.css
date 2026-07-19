@@ -148,7 +148,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  padding: 10px 15px;
   font-size: 15px;
   color: #ffffff;
   text-transform: uppercase;
@@ -251,13 +251,90 @@ h6 {
   color: #2e2e2e;
 }
 
+/* Nav Scroll Wrapper */
+.nav-scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-scroll-btn {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
-    display: block;
+    display: none !important;
+  }
+
+  /* Make navbar a horizontal scroll rail */
+  #navbar {
+    display: block !important;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    max-width: 60vw;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+    position: relative;
+    /* Add gradient mask */
+    mask-image: linear-gradient(to right, transparent, white 28px, white calc(100% - 28px), transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, white 28px, white calc(100% - 28px), transparent);
+  }
+  
+  #navbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
   }
 
   .navbar ul {
-    display: none;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .navbar li {
+    display: inline-block;
+  }
+
+  .navbar a {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+  }
+
+  /* Interactive Nav Scroll Buttons */
+  .nav-scroll-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 15;
+    background: rgba(18, 27, 60, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 0;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .nav-scroll-btn:hover {
+    background: rgba(18, 27, 60, 0.95);
+  }
+  .nav-scroll-btn:active {
+    transform: translateY(-50%) scale(0.9);
+  }
+  .nav-scroll-btn.left {
+    left: 2px;
+  }
+  .nav-scroll-btn.right {
+    right: 2px;
   }
 }
 
@@ -376,20 +453,43 @@ h6 {
   width: 50vw;
   margin-bottom: 17vh;
 }
+.hero-date {
+  font-size: 22px;
+  color: #f2d88f;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: -8vh;
+  margin-bottom: 4vh;
+  text-shadow: 0 0 12px rgba(242, 216, 143, 0.4);
+  font-family: "Montserrat", sans-serif;
+  background: rgba(18, 27, 60, 0.6);
+  border: 1.5px solid rgba(114, 152, 198, 0.25);
+  padding: 8px 24px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   #hero {
-    background: url("../img/hero-bg2.jpeg");
+    background: url("../img/hero-bg.jpg");
     background-size: cover;
     background-position: center;
     animation: panBackground 20s ease-in-out infinite alternate;
     overflow: hidden;
   }
   #hero .hero-logo img {
-    margin-bottom: 18vh; /* Push buttons down further */
-    margin-top: -15vh; /* Shift logo upwards */
+    margin-bottom: 10vh;
+    margin-top: 4vh; /* Shift logo down to push everything lower */
     width: 90vw;
     max-width: 320px;
+  }
+  .hero-date {
+    font-size: 16px;
+    margin-top: -4vh; /* Adjust date positioning below logo */
+    margin-bottom: 6vh; /* Push buttons down further */
+    padding: 6px 18px;
   }
 }
 
@@ -1610,7 +1710,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("../img/footer-bg.jpg") center center no-repeat;
+  background: url("../img/hero-bg.jpg") center center no-repeat;
   background-size: cover !important;
   color: #2e2e2e;
   font-size: 14px;
@@ -1823,8 +1923,9 @@ img {
   }
 }
 
-/* Click/Touch Flip */
-.club-window-card.flipped .club-window-inner {
+/* Click/Touch/Keyboard Focus Flip */
+.club-window-card.flipped .club-window-inner,
+.club-window-card:focus-within .club-window-inner {
   transform: rotateY(180deg);
 }
 
@@ -2295,20 +2396,6 @@ img {
   .course-rail-container {
     height: auto !important;
   }
-  /* Hide standard header elements on mobile */
-  #navbar, .mobile-nav-toggle {
-    display: none !important;
-  }
-  #header-section-title {
-    display: block !important;
-    font-size: 18px;
-    margin-left: auto;
-    padding-left: 15px;
-  }
-  .header-logo-container {
-    display: flex;
-    align-items: center;
-  }
   .header-logo-container .logo img {
     max-height: 35px;
     width: auto;
@@ -2322,29 +2409,6 @@ img {
 /* Schedule image border radius on desktop */
 .schedule-img {
   border-radius: 16px !important;
-}
-
-@media (min-width: 769px) {
-  #header-section-title {
-    display: none !important;
-  }
-  .header-logo-container {
-    display: none !important;
-  }
-}
-
-/* Mobile Header Section Title */
-.header-section-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #7298c6;
-  margin: 0;
-  transition: opacity 0.2s ease;
-  opacity: 1;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-.header-section-title.fade-out {
-  opacity: 0;
 }
 
 /* Course Rail Icons */

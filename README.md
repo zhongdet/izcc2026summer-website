@@ -127,15 +127,16 @@ python3 -m http.server 8080
 
 ## 主題色
 
-全站主題色採用 **星光黃** 色票系列：
+全站主題色以 **星辰藍** 與 **星光金** 為核心，搭配深邃的夜空藍與背景深灰：
 
-| 用途 | 色碼 |
-|------|------|
-| 主色 | `#F5C542` |
-| Hover / 淺色 | `#F8D776` |
-| Pressed / 深色 | `#D4A830` |
-| 淡底色 | `#FFF8E1` |
-| 按鈕邊框 | `#FFD700` |
+| 用途 | 色碼 / 設計 | 應用實例 |
+|------|------|------|
+| **星辰藍** | `#7298c6` | 連結主色、互動狀態、科技感飾線、動畫徽章細框 |
+| **星光金** | `#f2d88f` | Hover 互動狀態、Back to Top 按鈕 Hover |
+| **夜空深藍** | `#121b3c` | 動畫徽章填色背景、部分區塊背景/邊框 |
+| **科技暗藍** | `#1e305a` | 動畫徽章外層粗框 |
+| **背景深灰** | `#2e2e2e` | 網頁主背景、毛玻璃導覽列背景、下拉選單背景 |
+| **主文字灰白 ** | `#e4e4e4` | 網頁主體內容文字 |
 
 ## 技術棧
 
@@ -143,4 +144,5 @@ python3 -m http.server 8080
 |------|------|
 | 主網站 | 純靜態 HTML5, CSS3, JavaScript, Bootstrap 5, AOS, Swiper, GLightbox |
 | 開頭動畫 | React 19, TypeScript, Vite 6, Tailwind CSS 4, motion/react (framer-motion v12) |
-| 圖示字型 | Boxicons, Bootstrap Icons |
+| 圖示字型 | Boxicons, Bootstrap Icons, Font Awesome |
+

@@ -5,11 +5,11 @@
 
 import React from 'react';
 
-import inforLogo from '@/assets/infor.png';
-import zsiscLogo from '@/assets/zsisc.png';
-import ckcscLogo from '@/assets/ckcsc.png';
-import cmiocLogo from '@/assets/cmioc.png';
-import heroLogo from '@/assets/hero-logo.png';
+const inforLogo = '../assets/img/club/club-1.webp';
+const zsiscLogo = '../assets/img/club/club-3.webp';
+const ckcscLogo = '../assets/img/club/club-2.webp';
+const cmiocLogo = '../assets/img/club/club-4.webp';
+const heroLogo = '../assets/img/hero-logo.png';
 
 // Exported for preloading in IntroLoader
 export const ANIMATION_IMAGES = [inforLogo, zsiscLogo, ckcscLogo, cmiocLogo, heroLogo];

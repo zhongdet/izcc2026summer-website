@@ -46,18 +46,49 @@
    * Navbar links active state on scroll
    */
   let navbarlinks = select('#navbar .scrollto', true)
+  let lastActiveLink = null
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
-    navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
+    let activeLink = null
+    
+    // Find the currently active section (closest to top of viewport)
+    for (let i = navbarlinks.length - 1; i >= 0; i--) {
+      let navbarlink = navbarlinks[i]
+      if (!navbarlink.hash) continue
       let section = select(navbarlink.hash)
-      if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+      if (!section) continue
+      if (position >= section.offsetTop) {
+        activeLink = navbarlink
+        break
+      }
+    }
+    
+    // Default to first item if none matches (very top of page)
+    if (!activeLink && navbarlinks.length > 0) {
+      activeLink = navbarlinks[0]
+    }
+    
+    // Set active class strictly on the single active link
+    navbarlinks.forEach(navbarlink => {
+      if (navbarlink === activeLink) {
         navbarlink.classList.add('active')
       } else {
         navbarlink.classList.remove('active')
       }
     })
+
+    // Automatically scroll the active link into view inside the horizontal scrollbar
+    if (activeLink && activeLink !== lastActiveLink) {
+      lastActiveLink = activeLink
+      let navbar = select('#navbar')
+      if (navbar) {
+        activeLink.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center'
+        })
+      }
+    }
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
@@ -114,7 +145,32 @@
     }
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
+
+    backtotop.addEventListener('click', function(e) {
+      e.preventDefault()
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    })
   }
+
+  /**
+   * Horizontal scroll buttons for mobile navbar
+   */
+  on('click', '.nav-scroll-btn.left', function(e) {
+    let navbar = select('#navbar')
+    if (navbar) {
+      navbar.scrollBy({ left: -100, behavior: 'smooth' })
+    }
+  })
+
+  on('click', '.nav-scroll-btn.right', function(e) {
+    let navbar = select('#navbar')
+    if (navbar) {
+      navbar.scrollBy({ left: 100, behavior: 'smooth' })
+    }
+  })
 
   /**
    * Mobile nav toggle
